@@ -4,7 +4,6 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: xx-large;
 }
@@ -21,3 +20,45 @@ h3 {
   color: grey;
 }
 
+.main-header-label {
+  text-align: left;
+  font-family: Montserrat;
+  color: #191818;
+  margin-bottom: 20px;
+}
+
+.sub-header-descriptor {
+  color: #505050;
+  font-family: Montserrat;
+}
+
+.sub-header-label {
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+#home-hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/cs171-final-project/img/home-hero-background.jpg");
+  background-size: cover;
+}
+
+#home-hero-left {
+  margin-left: 10vw;
+  margin-top: 100px;
+}
+
+#home-hero-right {
+  margin-top: 100px;
+  margin-left: 5vw;
+}
+
+.main-header-box {
+  width: 250px;
+  height: 300px;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-image: url("/cs171-final-project/img/header-card.jpg");
+  border-radius: 8px;
+}
