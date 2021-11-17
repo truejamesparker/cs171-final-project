@@ -42,7 +42,7 @@ class TvVis {
 		var defs = vis.svg.append("defs")
 
 		defs.selectAll(".show-photo")
-			.data(vis.data)
+			.data(vis.data.filter(d => d.photo != null))
 			.enter()
 			.append("pattern")
 			.attr("class", "show-photo")
@@ -73,7 +73,7 @@ class TvVis {
 
 
 		vis.bmargin = { top: 20, bottom: 50 }
-		vis.bheight = 300 - vis.margin.top - vis.bmargin.bottom
+		vis.bheight = 200 - vis.margin.top - vis.bmargin.bottom
 
 		vis.brush = d3.brushX()
 			.extent([[vis.margin.left,0], [vis.width - vis.margin.right, vis.bheight]])
@@ -140,7 +140,8 @@ class TvVis {
 
         let shows = vis.svg.selectAll(".show").data(vis.displayData, d => d.id);
 
-		shows.exit().remove()
+		shows.exit()
+			.remove()
 
 		let newCircles = shows
             .enter()
@@ -154,7 +155,7 @@ class TvVis {
 				d3.select(this)
 					.attr("fill", function(d) { return `url(#${d.id})`; })
 				document.querySelector("#tv-stats h3").innerText = d.title;
-				document.querySelector("#tv-stats img").src = d.photo;
+				document.querySelector("#tv-stats img").src = d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png";
 			})
 			.on('mouseout', function(event, d) {
 				d3.select(this).attr("fill", "whitesmoke")
