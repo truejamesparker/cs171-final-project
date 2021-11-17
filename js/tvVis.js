@@ -147,7 +147,7 @@ class TvVis {
             .enter()
             .append("circle")
             .attr("class", "show")
-            .attr("fill", "whitesmoke")
+            .attr("fill", "#ebf2ff")
 			.attr("r", d => vis.radiusScale(d.episodes))
             .attr("cx", vis.width/2)
             .attr("cy", vis.height/2)
@@ -158,7 +158,7 @@ class TvVis {
 				document.querySelector("#tv-stats img").src = d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png";
 			})
 			.on('mouseout', function(event, d) {
-				d3.select(this).attr("fill", "whitesmoke")
+				d3.select(this).attr("fill", "#ebf2ff")
 			})
 
 		let allCircles = shows
