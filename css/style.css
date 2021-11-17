@@ -104,6 +104,10 @@ h3 {
 
 .visualization-label {
   margin-top: 40px;
+  font-family: Montserrat;
+  font-size: 20pt;
+  color: #191818;
+  margin-bottom: 20px;
   text-align: left;
 
 }
