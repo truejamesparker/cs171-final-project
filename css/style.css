@@ -39,7 +39,7 @@ h3 {
 
 #home-hero {
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   background-image: url("/cs171-final-project/img/home-hero-background.jpg");
   background-size: cover;
 }
@@ -51,7 +51,7 @@ h3 {
 
 #home-hero-right {
   margin-top: 100px;
-  margin-left: 5vw;
+  margin-left: 10vw;
 }
 
 .main-header-box {
@@ -61,4 +61,32 @@ h3 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-image: url("/cs171-final-project/img/header-card.jpg");
   border-radius: 8px;
+}
+
+.paragraph-body {
+  font-family: Montserrat;
+  color: #585858;
+}
+
+.background-info-box {
+  margin-top: 100px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 40px;
+  border-top: 10px solid #E8EFFC;
+}
+
+.background-emphasis {
+  font-weight: 800;
+}
+
+.visualization-header {
+  margin-top: 100px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.visualization-header-text {
+  text-align: center;
 }
