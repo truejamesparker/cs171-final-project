@@ -179,10 +179,10 @@ class TvVis {
             .on("tick", tick)
 
 		vis.simulation
-			.force('charge', d3.forceManyBody().strength(1))
+			.force('charge', d3.forceManyBody().strength(0.25))
 			.force('center', d3.forceCenter(vis.width / 2, vis.height / 2))
-			.force("x", d3.forceX(vis.width/2).strength(0.005))
-			.force("y", d3.forceY(vis.height/2).strength(0.005))
+			.force("x", d3.forceX(vis.width/2).strength(0.0025))
+			.force("y", d3.forceY(vis.height/2).strength(0.0025))
 			.force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
 
 
