@@ -1,3 +1,7 @@
+// Animate on scroll
+
+AOS.init();
+
 // VARIABLES
 
 let globalData;
