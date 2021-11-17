@@ -10,7 +10,7 @@ let url = 'https://example.com/example.json';
 
 let promises = [
     // fetch(url).then(resp => resp.json()),
-    // d3.json('data/example.json')
+    d3.json('data/tv_data.json')
 ];
 
 // AWAIT
@@ -22,15 +22,15 @@ Promise.all(promises)
 
 function initVisuals(datasets) {
     
-    // console.log(datasets);
+    console.log(datasets);
 
-    let dataset0 = datasets[0];
+    let tvData = datasets[0];
     // let dataset1 = datasets[0];
     // let dataset2 = datasets[0];
 
     // INITIALIZE VISUALIZATIONS
 
-    dataVis0 = new TemplateVis("vis0", dataset0);
+    tvVis = new TvVis("tv", tvData);
     // dataVis1 = new TemplateViz("my-parent-element1", dataset1);
     // dataVis2 = new TemplateViz("my-parent-element2", dataset2);
 
