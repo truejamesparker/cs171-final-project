@@ -19,6 +19,10 @@ function download(filename, text) {
 //     download("example.json", JSON.stringify(jsonData));
 // });
 
+function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+}
 
 // Function to convert date objects to strings or reverse
 let dateFormatter = d3.timeFormat("%Y-%m-%d");

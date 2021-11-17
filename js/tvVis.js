@@ -27,7 +27,7 @@ class TvVis {
 
 		// TODO
 
-		vis.margin = { top: 100, right: 50, bottom: 0, left: 50 };
+		vis.margin = { top: 20, right: 20, bottom: 0, left: 20 };
 
 		vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = 500 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
@@ -40,6 +40,8 @@ class TvVis {
 			.attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
 		var defs = vis.svg.append("defs")
+
+		vis.colors = ["#cfe0fe", "#ebf2ff", "#ebf2ff", "#dfabfb"]
 
 		defs.selectAll(".show-photo")
 			.data(vis.data.filter(d => d.photo != null))
@@ -72,8 +74,8 @@ class TvVis {
 		vis.selectedTime = null;
 
 
-		vis.bmargin = { top: 20, bottom: 50 }
-		vis.bheight = 200 - vis.margin.top - vis.bmargin.bottom
+		vis.bmargin = { top: 0, bottom: 20 }
+		vis.bheight = 100 - vis.margin.top - vis.bmargin.bottom
 
 		vis.brush = d3.brushX()
 			.extent([[vis.margin.left,0], [vis.width - vis.margin.right, vis.bheight]])
@@ -147,18 +149,19 @@ class TvVis {
             .enter()
             .append("circle")
             .attr("class", "show")
-            .attr("fill", "#ebf2ff")
+            .attr("fill", () => choose(vis.colors))
 			.attr("r", d => vis.radiusScale(d.episodes))
             .attr("cx", vis.width/2)
             .attr("cy", vis.height/2)
-			.on('click', function(event, d) {
+			.on('mousedown', function(event, d) {
+				event.target.setAttribute("defaultFill", event.target.getAttribute("fill"))
 				d3.select(this)
 					.attr("fill", function(d) { return `url(#${d.id})`; })
 				document.querySelector("#tv-stats h3").innerText = d.title;
 				document.querySelector("#tv-stats img").src = d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png";
 			})
-			.on('mouseout', function(event, d) {
-				d3.select(this).attr("fill", "#ebf2ff")
+			.on('mouseup', function(event, d) {
+				d3.select(this).attr("fill", event.target.getAttribute("defaultFill"))
 			})
 
 		let allCircles = shows
