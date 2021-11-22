@@ -34,6 +34,29 @@ class HomePriceIndexMap {
 
 		vis.states = L.layerGroup().addTo(vis.map);
 
+		let priceControl = L.control({position: 'bottomright'});
+
+		vis.priceKey;
+
+		priceControl.onAdd = function (map) {
+
+			vis.priceKey = L.DomUtil.create('div', 'info price-key');
+
+			vis.priceKey.innerHTML += '<i style="background: #D394DD"></i>' + "> 1000" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #DFAAFB"></i>' + "> 900" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D6B4FD"></i>' + "> 800" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D1BFFE"></i>' + "> 700" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #CFCAFF"></i>' + "> 600" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D5D9FF"></i>' + "> 500" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #E0E9FF"></i>' + "> 400" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #ECF5FF"></i>' + "> 300" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #F6F6F8"></i>' + "N/A" + '<br>'
+
+			return vis.priceKey;
+		};
+
+		priceControl.addTo(vis.map);
+
 		vis.wrangleData();
 	}
 
@@ -178,9 +201,30 @@ class HomePriceIndexMap {
 			}
 		}
 
-
+		if (variable_type == "HPI_change") {
+			vis.priceKey.innerHTML = '<i style="background: #D394DD"></i>' + "> 8" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #DFAAFB"></i>' + "> 6" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D6B4FD"></i>' + "> 4" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D1BFFE"></i>' + "> 3.5" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #CFCAFF"></i>' + "> 3" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D5D9FF"></i>' + "> 2.5" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #E0E9FF"></i>' + "> 2" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #ECF5FF"></i>' + "> 0.5" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #F6F6F8"></i>' + "N/A" + '<br>'
+		} else {
+			vis.priceKey.innerHTML = '<i style="background: #D394DD"></i>' + "> 1000" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #DFAAFB"></i>' + "> 900" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D6B4FD"></i>' + "> 800" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D1BFFE"></i>' + "> 700" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #CFCAFF"></i>' + "> 600" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #D5D9FF"></i>' + "> 500" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #E0E9FF"></i>' + "> 400" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #ECF5FF"></i>' + "> 300" + '<br>'
+			vis.priceKey.innerHTML += '<i style="background: #F6F6F8"></i>' + "N/A" + '<br>'
+		}
 
 
 	}
 }
+
 

@@ -135,3 +135,20 @@ h3 {
 .visualization-title > span, .visualization-source > span {
   font-weight: 600;
 }
+
+.price-key {
+  background: white;
+  padding: 18px;
+  line-height: 16px;
+  color: #191818;
+  border: 3px solid rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+.price-key i {
+  float: left;
+  width: 16px;
+  margin-right: 8px;
+  opacity: 0.8;
+  height: 16px;
+}
