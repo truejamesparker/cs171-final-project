@@ -42,12 +42,6 @@ class StateMovementBarChart {
 			.attr("transform", "translate(-10,0)rotate(-45)")
 			.style("text-anchor", "end");
 
-		vis.colorGradient = d3.scaleSequential()
-			.interpolator(d3.interpolate("#EBF3FF", "#DFAAFB"));
-
-		vis.colorGradient.domain([60, 70]);
-
-
 		vis.wrangleData();
 	}
 
@@ -100,6 +94,13 @@ class StateMovementBarChart {
 			domain_min = 50;
 			domain_max = 70;
 		}
+
+
+		vis.colorGradient = d3.scaleSequential()
+			.interpolator(d3.interpolate("#EBF3FF", "#DFAAFB"));
+
+		vis.colorGradient.domain([domain_min+5, domain_max]);
+
 
 		vis.y = d3.scaleLinear()
 			.domain([domain_min, domain_max])
