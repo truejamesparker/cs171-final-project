@@ -243,3 +243,19 @@ h3 {
 .home-4 {
   filter: invert(92%) sepia(76%) saturate(4243%) hue-rotate(205deg) brightness(88%) contrast(98%);
 }
+
+.shipmentsTooltip, .housingShowTooltip {
+  position: absolute;
+  text-align: left;
+  width: 250px;
+  background: white;
+  padding: 20px;
+  font: 12px Montserrat;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  /*border-top: 8px solid #E8F0FC;*/
+}
+
+.shipment-tooltip-emphasis {
+  font-weight: 600;
+}

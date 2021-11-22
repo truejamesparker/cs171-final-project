@@ -42,6 +42,10 @@ class StateMovementBarChart {
 			.attr("transform", "translate(-10,0)rotate(-45)")
 			.style("text-anchor", "end");
 
+		vis.tooltip = d3.select("body").append('div')
+			.attr('class', "shipmentsTooltip")
+			.attr('id', 'barTooltip')
+
 		vis.wrangleData();
 	}
 
@@ -136,6 +140,38 @@ class StateMovementBarChart {
 					return vis.colorGradient(d.Outbound_Percent)
 				}
 			});
+
+		vis.svg.selectAll("rect").on('mouseover', function(event, d) {
+			d3.select(this)
+				.attr('stroke-width', '3px')
+				.attr('stroke', 'lightgrey')
+				.attr('opacity', 0.7)
+
+			vis.tooltip
+				.style("opacity", 1)
+				.style("left", event.pageX + 20 + "px")
+				.style("top", event.pageY + "px")
+				.html(`
+                         <div>
+                             <p><span class="shipment-tooltip-emphasis">State:</span> ${d.StateName}</p>
+                             <p><span class="shipment-tooltip-emphasis">Total Shipments:</span> ${d.Total_Shipments}</p>                 
+                             <p><span class="shipment-tooltip-emphasis">Inbound Shipments:</span> ${d.Inbound_Shipments}</p>                                              
+                             <p><span class="shipment-tooltip-emphasis">Outbound Shipments:</span> ${d.Outbound_Shipments}</p> 
+                             <p><span class="shipment-tooltip-emphasis">Inbound Percent:</span> ${d.Inbound_Percent}%</p>                                              
+                             <p><span class="shipment-tooltip-emphasis">Outbound Percent:</span> ${d.Outbound_Percent}%</p>                                                                                      
+                         </div>`);
+		})
+			.on('mouseout', function (event, d) {
+				d3.select(this)
+					.attr('stroke-width', '0px')
+					.attr("opacity", 1)
+				vis.tooltip
+					.style("opacity", 0)
+					.style("left", 0)
+					.style("top", 0)
+					.html(``);
+
+			})
 
 	}
 

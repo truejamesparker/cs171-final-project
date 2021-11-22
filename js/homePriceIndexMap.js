@@ -116,7 +116,7 @@ class HomePriceIndexMap {
 			style: styleLines,
 			onEachFeature: onEachFeature,
 			weight: 3,
-			fillOpacity: 0.8
+			fillOpacity: 0.95
 		}).addTo(vis.map);
 
 
@@ -125,77 +125,167 @@ class HomePriceIndexMap {
 			if (variable_type == "HPI_change") {
 				if (d.properties.HPI_change > 8) {
 					return {
-						color: "#D394DD"
+						fillColor: "#D394DD",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 6) {
 					return {
-						color: "#DFAAFB"
+						fillColor: "#DFAAFB",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 4) {
 					return {
-						color: "#D6B4FD"
+						fillColor: "#D6B4FD",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 3.5) {
 					return {
-						color: "#D1BFFE"
+						fillColor: "#D1BFFE",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 3) {
 					return {
-						color: "#CFCAFF"
+						fillColor: "#CFCAFF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 2.5) {
 					return {
-						color: "#D5D9FF"
+						fillColor: "#D5D9FF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 2) {
 					return {
-						color: "#E0E9FF"
+						fillColor: "#E0E9FF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI_change > 0.5) {
 					return {
-						color: "#ECF5FF"
+						fillColor: "#ECF5FF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else {
 					return {
-						color: "#F6F6F8"
+						fillColor: "#F6F6F8",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				}
 			} else {
 				if (d.properties.HPI > 1000) {
 					return {
-						color: "#D394DD"
+						fillColor: "#D394DD",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 900) {
 					return {
-						color: "#DFAAFB"
+						fillColor: "#DFAAFB",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 800) {
 					return {
-						color: "#D6B4FD"
+						fillColor: "#D6B4FD",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 700) {
 					return {
-						color: "#D1BFFE"
+						fillColor: "#D1BFFE",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 600) {
 					return {
-						color: "#CFCAFF"
+						fillColor: "#CFCAFF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 500) {
 					return {
-						color: "#D5D9FF"
+						fillColor: "#D5D9FF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 400) {
 					return {
-						color: "#E0E9FF"
+						fillColor: "#E0E9FF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else if (d.properties.HPI > 300) {
 					return {
-						color: "#ECF5FF"
+						fillColor: "#ECF5FF",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				} else {
 					return {
-						color: "#F6F6F8"
+						fillColor: "#F6F6F8",
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '3',
+						fillOpacity: 0.7
 					}
 				}
 			}

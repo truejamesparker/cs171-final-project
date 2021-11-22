@@ -121,6 +121,10 @@ class TvVis {
 			.force('center', d3.forceCenter(vis.width / 2, vis.height / 2))
 			.force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
 
+		vis.tooltip = d3.select("body").append('div')
+			.attr('class', "housingShowTooltip")
+			.attr('id', 'barTooltip')
+
 		vis.wrangleData();
 	}
 
@@ -164,10 +168,11 @@ class TvVis {
             .attr("cx", vis.width/2)
             .attr("cy", vis.height/2)
 			.on('mousedown', function(event, d) {
+				console.log("go here ethan", d)
 				event.target.setAttribute("defaultFill", event.target.getAttribute("fill"))
 				d3.select(this)
 					.attr("fill", function(d) { return `url(#${d.id})`; })
-				document.querySelector("#tv-stats h3").innerText = d.title;
+				// document.querySelector("#tv-stats h3").innerText = d.title;
 				document.querySelector("#tv-stats img").src = d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png";
 			})
 			.on('mouseup', function(event, d) {
@@ -195,8 +200,46 @@ class TvVis {
 			.force("y", d3.forceY(vis.height/2).strength(0.0025))
 			.force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
 
+		vis.svg.selectAll("circle").on('mouseover', function(event, d) {
+			d3.select(this)
+				.attr('stroke-width', '3px')
+				.attr('stroke', 'lightgrey')
+				.attr('opacity', 0.7)
 
-		vis.simulation.alpha(1).alphaTarget(0).restart();
+			vis.tooltip
+				.style("opacity", 1)
+				.style("left", event.pageX + 20 + "px")
+				.style("top", event.pageY + "px")
+				.html(`
+                         <div style="padding-top: 25px;">
+                             <p><span class="shipment-tooltip-emphasis">Show Name:</span> ${d.title}</p>
+                              <p><span class="shipment-tooltip-emphasis">Episode Count:</span> ${d.episodes}</p>
+                              <p><span class="shipment-tooltip-emphasis">Genre(s):</span> ${d.genres}</p>
+                              <p><span class="shipment-tooltip-emphasis">Rating:</span> ${d.rating}</p>
+						  	  <div id="tv-stats">
+								<h3></h3>
+								<img style="max-width: 100%; max-height: 100%">
+							  </div>
+                           
+                                                                                    
+                         </div>`);
+		})
+			.on('mouseout', function (event, d) {
+				d3.select(this)
+					.attr('stroke-width', '0px')
+					.attr("opacity", 1)
+				vis.tooltip
+					.style("opacity", 0)
+					.style("left", 0)
+					.style("top", 0)
+					.html(``);
+
+			})
+
+
+
+
+	vis.simulation.alpha(1).alphaTarget(0).restart();
 
 	}
 }

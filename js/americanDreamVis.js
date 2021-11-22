@@ -51,10 +51,48 @@ class AmericanDreamVis {
             .attr("height", vis.height* 0.3)
             .attr("fill", "#3C3B6E");
 
+        for (let i = 0; i < 10; i++) {
+            vis.svg.append("path")
+                .attr("d", d3.symbol().type(d3.symbolStar).size(100))
+                .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-(i*20) + 58)+ "," + vis.height*0.22+")")
+                .attr("fill", "white")
+        }
+
+        for (let i = 0; i < 10; i++) {
+            vis.svg.append("path")
+                .attr("d", d3.symbol().type(d3.symbolStar).size(100))
+                .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-(i*20) + 58)+ "," + vis.height*0.18+")")
+                .attr("fill", "white")
+        }
+
+
+        for (let i = 0; i < 10; i++) {
+            vis.svg.append("path")
+                .attr("d", d3.symbol().type(d3.symbolStar).size(100))
+                .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-(i*20) + 58)+ "," + vis.height*0.14+")")
+                .attr("fill", "white")
+        }
+
+        for (let i = 0; i < 10; i++) {
+            vis.svg.append("path")
+                .attr("d", d3.symbol().type(d3.symbolStar).size(100))
+                .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-(i*20) + 58)+ "," + vis.height*0.1+")")
+                .attr("fill", "white")
+        }
+
+        for (let i = 0; i < 10; i++) {
+            vis.svg.append("path")
+                .attr("d", d3.symbol().type(d3.symbolStar).size(100))
+                .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-(i*20) + 58)+ "," + vis.height*0.06+")")
+                .attr("fill", "white")
+        }
+
+
+        /*
         vis.svg.append("path")
             .attr("d", d3.symbol().type(d3.symbolStar).size(1200))
-            .attr("transform", "translate("+ (vis.width/2+vis.margin.left/2)+ "," + vis.height*0.15+")")
-            .attr("fill", "white")
+            .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-30)+ "," + vis.height*0.15+")")
+            .attr("fill", "white")*/
 
         vis.xAxisGroup = vis.svg.append("g")
             .attr("class", "x-axis axis");
