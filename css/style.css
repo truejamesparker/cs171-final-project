@@ -225,4 +225,10 @@ h3 {
 
 #famous {
   transform: scale(0.92);
+
+}
+
+.home {
+  filter: invert(82%) sepia(40%) saturate(465%) hue-rotate(195deg) brightness(101%) contrast(97%);
+
 }
