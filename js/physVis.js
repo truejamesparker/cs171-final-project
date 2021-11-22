@@ -42,8 +42,8 @@ class PhysVis {
 			.append("g")
 			.attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
-		vis.timelineSvgMargin = { top: 0, bottom: 20 }
-		vis.timelineSvgHeight = 75 - vis.margin.top - vis.timelineSvgMargin.bottom
+		vis.timelineSvgMargin = { top: 10, bottom: 30 }
+		vis.timelineSvgHeight = 80 - vis.margin.top - vis.timelineSvgMargin.bottom
 
 		vis.timelineSvg = d3.select("#" + vis.parentElement).append("svg")
 			.attr("width", vis.width + vis.margin.left + vis.margin.right)
@@ -51,6 +51,22 @@ class PhysVis {
 			.append("g")
 			.attr("transform", `translate(${vis.margin.left}, ${vis.timelineSvgMargin.top})`)
 
+		vis.timelineSvg.append("text")
+			.attr("class", "y label")
+			.attr("text-anchor", "end")
+			.attr("x", vis.width - vis.margin.left)
+			.attr("y", vis.timelineSvgHeight - vis.timelineSvgMargin.top)
+			.attr("fill", "darkgrey")
+			.attr("font-size", "small")
+			.text("Year")
+
+		vis.svg.append("text")
+			.attr("class", "x label")
+			.attr("text-anchor", "middle")
+			.attr("transform", () => `translate(0,${vis.height/2}) rotate(-90)`)
+			.attr("fill", "darkgrey")
+			.attr("font-size", "small")
+			.text("# of houses (in thousands)")
 
 		vis.brush = d3.brushX()
 			.extent([[vis.margin.left,0], [vis.width - vis.margin.right, vis.timelineSvgHeight]])
