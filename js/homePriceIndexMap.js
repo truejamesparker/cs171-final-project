@@ -53,6 +53,19 @@ class HomePriceIndexMap {
 	updateVis(variable_type) {
 		let vis = this;
 
+		function activateHighlight(state) {
+			let selected_state = state.target;
+
+			selected_state.setStyle({
+				fillOpacity: 0.4
+			});
+
+		}
+
+		function turnOffHighlight(state) {
+			vis.stateBoundaries.resetStyle(state.target);
+		}
+
 		function onEachFeature(feature, layer) {
 
 			let popupContent = "";
@@ -67,6 +80,11 @@ class HomePriceIndexMap {
 
 			}
 
+			layer.on({
+				mouseover: activateHighlight,
+				mouseout: turnOffHighlight
+			});
+
 			layer.bindPopup(popupContent);
 
 		}
@@ -74,7 +92,7 @@ class HomePriceIndexMap {
 		vis.stateBoundaries  = L.geoJson(vis.geoJSONdata, {
 			style: styleLines,
 			onEachFeature: onEachFeature,
-			weight: 2,
+			weight: 3,
 			fillOpacity: 0.8
 		}).addTo(vis.map);
 
