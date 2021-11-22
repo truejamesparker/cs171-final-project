@@ -222,3 +222,7 @@ h3 {
   background-image: url("/cs171-final-project/img/conclusion-background.jpg");
   background-size: cover;
 }
+
+#famous {
+  transform: scale(0.92);
+}
