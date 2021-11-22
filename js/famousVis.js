@@ -86,12 +86,29 @@ class FamousVis {
 
 		console.log(vis.displayData)
 
+		function getRandomInt(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+		}
+
 		// TODO
 		vis.svg.selectAll(".home")
 			.data(vis.displayData)
 			.enter()
 			.append("svg:image")
-			.attr("class", "home")
+			.attr("class", function(d) {
+				let randomNumber = getRandomInt(0, 4);
+				if (randomNumber == 1) {
+					return "home"
+				} else if (randomNumber == 2) {
+					return "home-2"
+				} else if (randomNumber == 3) {
+					return "home-3"
+				} else {
+					return "home-4"
+				}
+			})
 			.attr("xlink:href", "img/mansion.svg")
 			.attr("x", d => vis.x(d.completed))
 			.attr("y", (d,i) => 50)
