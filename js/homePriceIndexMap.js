@@ -26,7 +26,7 @@ class HomePriceIndexMap {
 
 		L.Icon.Default.imagePath = 'img/';
 
-		vis.map = L.map(vis.parentElement).setView([40.0902, -95.7129], 3.7);
+		vis.map = L.map(vis.parentElement).setView([40.0902, -95.7129], 3.5);
 
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -60,6 +60,7 @@ class HomePriceIndexMap {
 			if (variable_type == "HPI_change") {
 				popupContent += "<strong>2020 Yearly Percent HPI Change: </strong>"
 				popupContent += feature.properties.HPI_change;
+				popupContent += "%"
 			} else {
 				popupContent =  "<strong>2020 Home Price Index (HPI): </strong>";
 				popupContent += feature.properties.HPI;
