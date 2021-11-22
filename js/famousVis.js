@@ -27,10 +27,10 @@ class FamousVis {
 
 		// TODO
 
-		vis.margin = { top: 40, right: 20, bottom: 40, left: 20 };
+		vis.margin = { top: 0, right: 40, bottom: 40, left: 20 };
 
 		vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-		vis.height = 300 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
+		vis.height = 200 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
 
 		// SVG drawing area
 		vis.svg = d3.select("#" + vis.parentElement).append("svg")
