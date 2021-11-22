@@ -92,13 +92,13 @@ h3 {
 }
 
 .visualization-container {
-  margin-left: 10vw;
+  /*margin-left: 10vw;*/
   margin-top: 50px;
 }
 
 .empty-visualization {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   background: #F6F6F8;
 }
 
@@ -110,4 +110,28 @@ h3 {
   margin-bottom: 20px;
   text-align: left;
 
+}
+
+.visualization-title {
+  /*font-family: Open Sans;*/
+  text-align: center;
+}
+
+#price-map {
+  width: 95%;
+  height: 400px;
+}
+
+.form-control {
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+.visualization-source {
+   margin-top: 25px;
+   text-align: center;
+}
+
+.visualization-title > span, .visualization-source > span {
+  font-weight: 600;
 }

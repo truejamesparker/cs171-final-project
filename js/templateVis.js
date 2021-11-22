@@ -1,6 +1,6 @@
 
 /*
- *  StationMap - Object constructor function
+ *  HomePriceIndexMap - Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
  *  @param _data            -- Array with all stations of the bike-sharing network
  */

@@ -1,6 +1,6 @@
 
 /*
- *  StationMap - Object constructor function
+ *  HomePriceIndexMap - Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
  *  @param _data            -- Array with all stations of the bike-sharing network
  */
@@ -90,6 +90,16 @@ class TvVis {
 			.attr("height", vis.bheight + vis.bmargin.bottom + vis.bmargin.top)
 			.append("g")
 			.attr("transform", `translate(${vis.margin.left}, ${vis.bmargin.top})`)
+
+		/* vis.svg.append("text")
+			.attr("x", (vis.width / 2))
+			.attr("y", 10 - (vis.margin.top / 2))
+			.attr("class", "visualization-title")
+			.attr("text-anchor", "middle")
+			.style("font-size", "16px")
+			.text("Housing TV Show Popularity vs. Time");
+
+		 */
 
 		vis.timeline = vis.bSvg
 			.append("g")
