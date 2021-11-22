@@ -15,7 +15,9 @@ let url = 'https://example.com/example.json';
 let promises = [
     // fetch(url).then(resp => resp.json()),
     d3.json('data/tv_data.json'),
-    d3.csv('data/american_dream_data.csv')
+    d3.csv('data/american_dream_data.csv'),
+    d3.json('data/home_phys_data_nested.json'),
+    d3.csv('data/famous_homes.csv')
 ];
 
 // AWAIT
@@ -31,14 +33,15 @@ function initVisuals(datasets) {
 
     let tvData = datasets[0];
     let dreamData = datasets[1];
-    // let dataset1 = datasets[0];
-    // let dataset2 = datasets[0];
+    let physData = datasets[2];
+    let famousData = datasets[3];
 
     // INITIALIZE VISUALIZATIONS
 
     tvVis = new TvVis("tv", tvData);
     dreamVis = new AmericanDreamVis("american-dream-vis", dreamData)
-    // dataVis1 = new TemplateViz("my-parent-element1", dataset1);
+    physVis = new PhysVis("physical", physData);
+    famousVis = new FamousVis("famous", famousData);
     // dataVis2 = new TemplateViz("my-parent-element2", dataset2);
 
     // INIT EVENT HANDLERS

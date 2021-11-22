@@ -56,8 +56,20 @@
                 <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Physiological: Physical characteristics of US homes visualization]
             </div>
             <div class="col-md-6" class="visualization-container-right">
-                <div class="empty-visualization"></div>
-                <!--<div class="align-self-center" id="vis0"></div>-->
+                <div class="row">
+                    <div class="text-center">
+                        <div id="physButtonGroup" class="btn-group" role="group">
+                            <button id="bed" type="button" class="btn btn-secondary">Beds</button>
+                            <button id="bath" type="button" class="btn btn-secondary">Baths</button>
+                            <button id="sqft" type="button" class="btn btn-secondary">Square Feet</button>
+                            <button id="story" type="button" class="btn btn-secondary">Stories</button>
+                            <button id="garage" type="button" class="btn btn-secondary">Garage</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="physical"></div>
+                </div>
             </div>
         </div>
         <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
@@ -165,8 +177,8 @@
         </div>
     </div>
     <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
-        <div class="col-md-6" class="visualization-container-left">
-            <div class="empty-visualization"></div>
+        <div class="col" class="visualization-container-left">
+            <div id="famous"></div>
             <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
         <div class="col-md-4" class="visualization-container-right">
@@ -222,12 +234,13 @@
 <script src="js/leaflet.js"></script>
 
 <!-- Visualization objects -->
-<script src="js/tvVis.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/homePriceIndexMap.js"></script>
 <script src="js/stateMovementBarChart.js"></script>
 <script src="js/americanDreamVis.js"></script>
-
+<script src="js/tvVis.js"></script>
+<script src="js/physVis.js"></script>
+<script src="js/famousVis.js"></script>
 
 <!-- Load data, create visualizations -->
 <script src="js/main.js"></script>

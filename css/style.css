@@ -109,7 +109,6 @@ h3 {
   color: #191818;
   margin-bottom: 20px;
   text-align: left;
-
 }
 
 .visualization-title {
@@ -156,4 +155,15 @@ h3 {
 #inboundGraphContainer {
   /*width: 100%;
   height: 500px;*/
+}
+
+#physButtonGroup .btn-secondary {
+  background-color: steelblue;
+  border-color: white;
+}
+
+
+.gPath {
+  fill: none;
+  stroke-width: 3;
 }

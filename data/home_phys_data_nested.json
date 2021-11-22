@@ -1,0 +1,1507 @@
+[
+ {
+   "year": 1978,
+   "total": 816,
+   "bath": {
+      "1_5_minus_bath": 181,
+      "2_baths": 419,
+      "2_5_baths": 153,
+      "3_plus_baths": 63
+   },
+   "bed": {
+      "2_minus_beds": 74,
+      "3_beds": 523,
+      "4_plus_beds": 219
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1750,
+      "med_sq_ft": 1650
+   },
+   "price": {
+      "sold_med_price": 55700,
+      "sold_avg_price": 62500
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1979,
+   "total": 708,
+   "bath": {
+      "1_5_minus_bath": 150,
+      "2_baths": 363,
+      "2_5_baths": 138,
+      "3_plus_baths": 57
+   },
+   "bed": {
+      "2_minus_beds": 82,
+      "3_beds": 451,
+      "4_plus_beds": 176
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1760,
+      "med_sq_ft": 1650
+   },
+   "price": {
+      "sold_med_price": 62900,
+      "sold_avg_price": 71800
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1980,
+   "total": 530,
+   "bath": {
+      "1_5_minus_bath": 127,
+      "2_baths": 275,
+      "2_5_baths": 90,
+      "3_plus_baths": 38
+   },
+   "bed": {
+      "2_minus_beds": 76,
+      "3_beds": 339,
+      "4_plus_beds": 115
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1700,
+      "med_sq_ft": 1570
+   },
+   "price": {
+      "sold_med_price": 64600,
+      "sold_avg_price": 76400
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1981,
+   "total": 188,
+   "bath": {
+      "1_5_minus_bath": 114,
+      "2_baths": 49,
+      "2_5_baths": 18,
+      "3_plus_baths": 7
+   },
+   "bed": {
+      "2_minus_beds": 84,
+      "3_beds": 260,
+      "4_plus_beds": 93
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1710,
+      "med_sq_ft": 1560
+   },
+   "price": {
+      "sold_med_price": 68900,
+      "sold_avg_price": 83000
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1982,
+   "total": 412,
+   "bath": {
+      "1_5_minus_bath": 105,
+      "2_baths": 205,
+      "2_5_baths": 72,
+      "3_plus_baths": 30
+   },
+   "bed": {
+      "2_minus_beds": 85,
+      "3_beds": 246,
+      "4_plus_beds": 81
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1690,
+      "med_sq_ft": 1530
+   },
+   "price": {
+      "sold_med_price": 69300,
+      "sold_avg_price": 83900
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1983,
+   "total": 622,
+   "bath": {
+      "1_5_minus_bath": 138,
+      "2_baths": 314,
+      "2_5_baths": 121,
+      "3_plus_baths": 49
+   },
+   "bed": {
+      "2_minus_beds": 138,
+      "3_beds": 363,
+      "4_plus_beds": 122
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1740,
+      "med_sq_ft": 1580
+   },
+   "price": {
+      "sold_med_price": 75300,
+      "sold_avg_price": 89800
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1984,
+   "total": 639,
+   "bath": {
+      "1_5_minus_bath": 127,
+      "2_baths": 320,
+      "2_5_baths": 136,
+      "3_plus_baths": 56
+   },
+   "bed": {
+      "2_minus_beds": 153,
+      "3_beds": 365,
+      "4_plus_beds": 121
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1790,
+      "med_sq_ft": 1610
+   },
+   "price": {
+      "sold_med_price": 79900,
+      "sold_avg_price": 97600
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1985,
+   "total": 687,
+   "bath": {
+      "1_5_minus_bath": 136,
+      "2_baths": 338,
+      "2_5_baths": 156,
+      "3_plus_baths": 57
+   },
+   "bed": {
+      "2_minus_beds": 156,
+      "3_beds": 394,
+      "4_plus_beds": 137
+   },
+   "garage": {
+      "1_car_garage": null,
+      "2_car_garage": null,
+      "3_plus_car_garage": null,
+      "carport": null,
+      "no_garage_carport": null
+   },
+   "sqft": {
+      "avg_sq_ft": 1760,
+      "med_sq_ft": 1590
+   },
+   "price": {
+      "sold_med_price": 84300,
+      "sold_avg_price": 100800
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1986,
+   "total": 751,
+   "bath": {
+      "1_5_minus_bath": 117,
+      "2_baths": 359,
+      "2_5_baths": 208,
+      "3_plus_baths": 67
+   },
+   "bed": {
+      "2_minus_beds": 142,
+      "3_beds": 437,
+      "4_plus_beds": 171
+   },
+   "garage": {
+      "1_car_garage": 116,
+      "2_car_garage": 487,
+      "3_plus_car_garage": null,
+      "carport": 21,
+      "no_garage_carport": 125
+   },
+   "sqft": {
+      "avg_sq_ft": 1810,
+      "med_sq_ft": 1650
+   },
+   "price": {
+      "sold_med_price": 92000,
+      "sold_avg_price": 111900
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1987,
+   "total": 671,
+   "bath": {
+      "1_5_minus_bath": 84,
+      "2_baths": 306,
+      "2_5_baths": 208,
+      "3_plus_baths": 73
+   },
+   "bed": {
+      "2_minus_beds": 106,
+      "3_beds": 387,
+      "4_plus_beds": 178
+   },
+   "garage": {
+      "1_car_garage": 100,
+      "2_car_garage": 473,
+      "3_plus_car_garage": null,
+      "carport": 14,
+      "no_garage_carport": 84
+   },
+   "sqft": {
+      "avg_sq_ft": 1900,
+      "med_sq_ft": 1760
+   },
+   "price": {
+      "sold_med_price": 104500,
+      "sold_avg_price": 127200
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1988,
+   "total": 676,
+   "bath": {
+      "1_5_minus_bath": 73,
+      "2_baths": 298,
+      "2_5_baths": 218,
+      "3_plus_baths": 87
+   },
+   "bed": {
+      "2_minus_beds": 95,
+      "3_beds": 383,
+      "4_plus_beds": 198
+   },
+   "garage": {
+      "1_car_garage": 83,
+      "2_car_garage": 497,
+      "3_plus_car_garage": null,
+      "carport": 12,
+      "no_garage_carport": 84
+   },
+   "sqft": {
+      "avg_sq_ft": 1960,
+      "med_sq_ft": 1800
+   },
+   "price": {
+      "sold_med_price": 112500,
+      "sold_avg_price": 138300
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1989,
+   "total": 650,
+   "bath": {
+      "1_5_minus_bath": 67,
+      "2_baths": 276,
+      "2_5_baths": 212,
+      "3_plus_baths": 95
+   },
+   "bed": {
+      "2_minus_beds": 81,
+      "3_beds": 364,
+      "4_plus_beds": 205
+   },
+   "garage": {
+      "1_car_garage": 72,
+      "2_car_garage": 492,
+      "3_plus_car_garage": null,
+      "carport": 10,
+      "no_garage_carport": 75
+   },
+   "sqft": {
+      "avg_sq_ft": 2000,
+      "med_sq_ft": 1860
+   },
+   "price": {
+      "sold_med_price": 120000,
+      "sold_avg_price": 148800
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1990,
+   "total": 535,
+   "bath": {
+      "1_5_minus_bath": 52,
+      "2_baths": 230,
+      "2_5_baths": 167,
+      "3_plus_baths": 86
+   },
+   "bed": {
+      "2_minus_beds": 60,
+      "3_beds": 301,
+      "4_plus_beds": 173
+   },
+   "garage": {
+      "1_car_garage": 59,
+      "2_car_garage": 410,
+      "3_plus_car_garage": null,
+      "carport": 7,
+      "no_garage_carport": 58
+   },
+   "sqft": {
+      "avg_sq_ft": 2050,
+      "med_sq_ft": 1890
+   },
+   "price": {
+      "sold_med_price": 122900,
+      "sold_avg_price": 149800
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1991,
+   "total": 509,
+   "bath": {
+      "1_5_minus_bath": 52,
+      "2_baths": 209,
+      "2_5_baths": 173,
+      "3_plus_baths": 75
+   },
+   "bed": {
+      "2_minus_beds": 53,
+      "3_beds": 290,
+      "4_plus_beds": 166
+   },
+   "garage": {
+      "1_car_garage": 53,
+      "2_car_garage": 393,
+      "3_plus_car_garage": null,
+      "carport": 6,
+      "no_garage_carport": 57
+   },
+   "sqft": {
+      "avg_sq_ft": 2050,
+      "med_sq_ft": 1900
+   },
+   "price": {
+      "sold_med_price": 120000,
+      "sold_avg_price": 147200
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1992,
+   "total": 610,
+   "bath": {
+      "1_5_minus_bath": 57,
+      "2_baths": 249,
+      "2_5_baths": 226,
+      "3_plus_baths": 78
+   },
+   "bed": {
+      "2_minus_beds": 60,
+      "3_beds": 350,
+      "4_plus_beds": 200
+   },
+   "garage": {
+      "1_car_garage": 57,
+      "2_car_garage": 425,
+      "3_plus_car_garage": 64,
+      "carport": 7,
+      "no_garage_carport": 56
+   },
+   "sqft": {
+      "avg_sq_ft": 2060,
+      "med_sq_ft": 1900
+   },
+   "price": {
+      "sold_med_price": 121500,
+      "sold_avg_price": 144100
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1993,
+   "total": 666,
+   "bath": {
+      "1_5_minus_bath": 54,
+      "2_baths": 272,
+      "2_5_baths": 253,
+      "3_plus_baths": 87
+   },
+   "bed": {
+      "2_minus_beds": 62,
+      "3_beds": 375,
+      "4_plus_beds": 229
+   },
+   "garage": {
+      "1_car_garage": 57,
+      "2_car_garage": 463,
+      "3_plus_car_garage": 81,
+      "carport": 5,
+      "no_garage_carport": 60
+   },
+   "sqft": {
+      "avg_sq_ft": 2060,
+      "med_sq_ft": 1900
+   },
+   "price": {
+      "sold_med_price": 126500,
+      "sold_avg_price": 147700
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1994,
+   "total": 670,
+   "bath": {
+      "1_5_minus_bath": 56,
+      "2_baths": 278,
+      "2_5_baths": 243,
+      "3_plus_baths": 93
+   },
+   "bed": {
+      "2_minus_beds": 65,
+      "3_beds": 378,
+      "4_plus_beds": 227
+   },
+   "garage": {
+      "1_car_garage": 60,
+      "2_car_garage": 463,
+      "3_plus_car_garage": 86,
+      "carport": 5,
+      "no_garage_carport": 56
+   },
+   "sqft": {
+      "avg_sq_ft": 2050,
+      "med_sq_ft": 1900
+   },
+   "price": {
+      "sold_med_price": 130000,
+      "sold_avg_price": 154500
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1995,
+   "total": 667,
+   "bath": {
+      "1_5_minus_bath": 49,
+      "2_baths": 289,
+      "2_5_baths": 236,
+      "3_plus_baths": 93
+   },
+   "bed": {
+      "2_minus_beds": 65,
+      "3_beds": 373,
+      "4_plus_beds": 229
+   },
+   "garage": {
+      "1_car_garage": 52,
+      "2_car_garage": 467,
+      "3_plus_car_garage": 90,
+      "carport": 5,
+      "no_garage_carport": 54
+   },
+   "sqft": {
+      "avg_sq_ft": 2050,
+      "med_sq_ft": 1880
+   },
+   "price": {
+      "sold_med_price": 133900,
+      "sold_avg_price": 158700
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1996,
+   "total": 757,
+   "bath": {
+      "1_5_minus_bath": 48,
+      "2_baths": 322,
+      "2_5_baths": 273,
+      "3_plus_baths": 115
+   },
+   "bed": {
+      "2_minus_beds": 72,
+      "3_beds": 420,
+      "4_plus_beds": 265
+   },
+   "garage": {
+      "1_car_garage": 59,
+      "2_car_garage": 528,
+      "3_plus_car_garage": 106,
+      "carport": 6,
+      "no_garage_carport": 59
+   },
+   "sqft": {
+      "avg_sq_ft": 2090,
+      "med_sq_ft": 1940
+   },
+   "price": {
+      "sold_med_price": 140000,
+      "sold_avg_price": 166400
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1997,
+   "total": 804,
+   "bath": {
+      "1_5_minus_bath": 45,
+      "2_baths": 334,
+      "2_5_baths": 294,
+      "3_plus_baths": 131
+   },
+   "bed": {
+      "2_minus_beds": 81,
+      "3_beds": 440,
+      "4_plus_beds": 283
+   },
+   "garage": {
+      "1_car_garage": 64,
+      "2_car_garage": 555,
+      "3_plus_car_garage": 121,
+      "carport": 6,
+      "no_garage_carport": 59
+   },
+   "sqft": {
+      "avg_sq_ft": 2140,
+      "med_sq_ft": 1960
+   },
+   "price": {
+      "sold_med_price": 146000,
+      "sold_avg_price": 176200
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1998,
+   "total": 886,
+   "bath": {
+      "1_5_minus_bath": 42,
+      "2_baths": 363,
+      "2_5_baths": 332,
+      "3_plus_baths": 149
+   },
+   "bed": {
+      "2_minus_beds": 85,
+      "3_beds": 474,
+      "4_plus_beds": 327
+   },
+   "garage": {
+      "1_car_garage": 65,
+      "2_car_garage": 620,
+      "3_plus_car_garage": 135,
+      "carport": 8,
+      "no_garage_carport": 58
+   },
+   "sqft": {
+      "avg_sq_ft": 2170,
+      "med_sq_ft": 2000
+   },
+   "price": {
+      "sold_med_price": 152500,
+      "sold_avg_price": 181900
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 1999,
+   "total": 880,
+   "bath": {
+      "1_5_minus_bath": 41,
+      "2_baths": 340,
+      "2_5_baths": 333,
+      "3_plus_baths": 166
+   },
+   "bed": {
+      "2_minus_beds": 86,
+      "3_beds": 457,
+      "4_plus_beds": 337
+   },
+   "garage": {
+      "1_car_garage": 68,
+      "2_car_garage": 615,
+      "3_plus_car_garage": 141,
+      "carport": 5,
+      "no_garage_carport": 51
+   },
+   "sqft": {
+      "avg_sq_ft": 2221,
+      "med_sq_ft": 2033
+   },
+   "price": {
+      "sold_med_price": 161000,
+      "sold_avg_price": 195600
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 2000,
+   "total": 877,
+   "bath": {
+      "1_5_minus_bath": 37,
+      "2_baths": 343,
+      "2_5_baths": 324,
+      "3_plus_baths": 173
+   },
+   "bed": {
+      "2_minus_beds": 75,
+      "3_beds": 456,
+      "4_plus_beds": 347
+   },
+   "garage": {
+      "1_car_garage": 62,
+      "2_car_garage": 601,
+      "3_plus_car_garage": 156,
+      "carport": 5,
+      "no_garage_carport": 54
+   },
+   "sqft": {
+      "avg_sq_ft": 2265,
+      "med_sq_ft": 2077
+   },
+   "price": {
+      "sold_med_price": 169000,
+      "sold_avg_price": 207000
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 2001,
+   "total": 908,
+   "bath": {
+      "1_5_minus_bath": 38,
+      "2_baths": 353,
+      "2_5_baths": 340,
+      "3_plus_baths": 177
+   },
+   "bed": {
+      "2_minus_beds": 82,
+      "3_beds": 462,
+      "4_plus_beds": 363
+   },
+   "garage": {
+      "1_car_garage": 58,
+      "2_car_garage": 634,
+      "3_plus_car_garage": 163,
+      "carport": 4,
+      "no_garage_carport": 49
+   },
+   "sqft": {
+      "avg_sq_ft": 2282,
+      "med_sq_ft": 2099
+   },
+   "price": {
+      "sold_med_price": 175200,
+      "sold_avg_price": 213200
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 2002,
+   "total": 973,
+   "bath": {
+      "1_5_minus_bath": 37,
+      "2_baths": 370,
+      "2_5_baths": 363,
+      "3_plus_baths": 204
+   },
+   "bed": {
+      "2_minus_beds": 94,
+      "3_beds": 478,
+      "4_plus_beds": 401
+   },
+   "garage": {
+      "1_car_garage": 62,
+      "2_car_garage": 670,
+      "3_plus_car_garage": 182,
+      "carport": 5,
+      "no_garage_carport": 54
+   },
+   "sqft": {
+      "avg_sq_ft": 2301,
+      "med_sq_ft": 2134
+   },
+   "price": {
+      "sold_med_price": 187600,
+      "sold_avg_price": 228700
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 2003,
+   "total": 1086,
+   "bath": {
+      "1_5_minus_bath": 37,
+      "2_baths": 413,
+      "2_5_baths": 394,
+      "3_plus_baths": 243
+   },
+   "bed": {
+      "2_minus_beds": 113,
+      "3_beds": 533,
+      "4_plus_beds": 441
+   },
+   "garage": {
+      "1_car_garage": 70,
+      "2_car_garage": 744,
+      "3_plus_car_garage": 209,
+      "carport": 5,
+      "no_garage_carport": 58
+   },
+   "sqft": {
+      "avg_sq_ft": 2315,
+      "med_sq_ft": 2125
+   },
+   "price": {
+      "sold_med_price": 195000,
+      "sold_avg_price": 246300
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 2004,
+   "total": 1203,
+   "bath": {
+      "1_5_minus_bath": 35,
+      "2_baths": 463,
+      "2_5_baths": 421,
+      "3_plus_baths": 284
+   },
+   "bed": {
+      "2_minus_beds": 119,
+      "3_beds": 584,
+      "4_plus_beds": 500
+   },
+   "garage": {
+      "1_car_garage": 78,
+      "2_car_garage": 830,
+      "3_plus_car_garage": 235,
+      "carport": 7,
+      "no_garage_carport": 54
+   },
+   "sqft": {
+      "avg_sq_ft": 2366,
+      "med_sq_ft": 2169
+   },
+   "price": {
+      "sold_med_price": 221000,
+      "sold_avg_price": 274500
+   },
+   "story": {
+      "1_story": null,
+      "2_story": null,
+      "3_story": null
+   }
+},
+ {
+   "year": 2005,
+   "total": 1283,
+   "bath": {
+      "1_5_minus_bath": 34,
+      "2_baths": 458,
+      "2_5_baths": 464,
+      "3_plus_baths": 326
+   },
+   "bed": {
+      "2_minus_beds": 130,
+      "3_beds": 612,
+      "4_plus_beds": 541
+   },
+   "garage": {
+      "1_car_garage": 89,
+      "2_car_garage": 874,
+      "3_plus_car_garage": 249,
+      "carport": 8,
+      "no_garage_carport": 61
+   },
+   "sqft": {
+      "avg_sq_ft": 2414,
+      "med_sq_ft": 2235
+   },
+   "price": {
+      "sold_med_price": 240900,
+      "sold_avg_price": 297000
+   },
+   "story": {
+      "1_story": 539,
+      "2_story": 715,
+      "3_story": 28
+   }
+},
+ {
+   "year": 2006,
+   "total": 1051,
+   "bath": {
+      "1_5_minus_bath": 28,
+      "2_baths": 366,
+      "2_5_baths": 380,
+      "3_plus_baths": 276
+   },
+   "bed": {
+      "2_minus_beds": 103,
+      "3_beds": 506,
+      "4_plus_beds": 441
+   },
+   "garage": {
+      "1_car_garage": 69,
+      "2_car_garage": 727,
+      "3_plus_car_garage": 197,
+      "carport": 6,
+      "no_garage_carport": 51
+   },
+   "sqft": {
+      "avg_sq_ft": 2456,
+      "med_sq_ft": 2237
+   },
+   "price": {
+      "sold_med_price": 246500,
+      "sold_avg_price": 305900
+   },
+   "story": {
+      "1_story": 408,
+      "2_story": 621,
+      "3_story": 22
+   }
+},
+ {
+   "year": 2007,
+   "total": 776,
+   "bath": {
+      "1_5_minus_bath": 19,
+      "2_baths": 273,
+      "2_5_baths": 273,
+      "3_plus_baths": 211
+   },
+   "bed": {
+      "2_minus_beds": 77,
+      "3_beds": 386,
+      "4_plus_beds": 312
+   },
+   "garage": {
+      "1_car_garage": 52,
+      "2_car_garage": 539,
+      "3_plus_car_garage": 141,
+      "carport": 5,
+      "no_garage_carport": 38
+   },
+   "sqft": {
+      "avg_sq_ft": 2479,
+      "med_sq_ft": 2235
+   },
+   "price": {
+      "sold_med_price": 247900,
+      "sold_avg_price": 313600
+   },
+   "story": {
+      "1_story": 306,
+      "2_story": 444,
+      "3_story": 26
+   }
+},
+ {
+   "year": 2008,
+   "total": 485,
+   "bath": {
+      "1_5_minus_bath": 12,
+      "2_baths": 173,
+      "2_5_baths": 171,
+      "3_plus_baths": 129
+   },
+   "bed": {
+      "2_minus_beds": 45,
+      "3_beds": 242,
+      "4_plus_beds": 197
+   },
+   "garage": {
+      "1_car_garage": 33,
+      "2_car_garage": 339,
+      "3_plus_car_garage": 88,
+      "carport": 2,
+      "no_garage_carport": 23
+   },
+   "sqft": {
+      "avg_sq_ft": 2473,
+      "med_sq_ft": 2234
+   },
+   "price": {
+      "sold_med_price": 232100,
+      "sold_avg_price": 292600
+   },
+   "story": {
+      "1_story": 190,
+      "2_story": 277,
+      "3_story": 18
+   }
+},
+ {
+   "year": 2009,
+   "total": 375,
+   "bath": {
+      "1_5_minus_bath": 11,
+      "2_baths": 139,
+      "2_5_baths": 133,
+      "3_plus_baths": 92
+   },
+   "bed": {
+      "2_minus_beds": 33,
+      "3_beds": 200,
+      "4_plus_beds": 142
+   },
+   "garage": {
+      "1_car_garage": 24,
+      "2_car_garage": 272,
+      "3_plus_car_garage": 63,
+      "carport": 1,
+      "no_garage_carport": 15
+   },
+   "sqft": {
+      "avg_sq_ft": 2422,
+      "med_sq_ft": 2202
+   },
+   "price": {
+      "sold_med_price": 216700,
+      "sold_avg_price": 270900
+   },
+   "story": {
+      "1_story": 159,
+      "2_story": 200,
+      "3_story": 15
+   }
+},
+ {
+   "year": 2010,
+   "total": 323,
+   "bath": {
+      "1_5_minus_bath": 7,
+      "2_baths": 106,
+      "2_5_baths": 120,
+      "3_plus_baths": 89
+   },
+   "bed": {
+      "2_minus_beds": 23,
+      "3_beds": 166,
+      "4_plus_beds": 133
+   },
+   "garage": {
+      "1_car_garage": 16,
+      "2_car_garage": 235,
+      "3_plus_car_garage": 55,
+      "carport": 1,
+      "no_garage_carport": 15
+   },
+   "sqft": {
+      "avg_sq_ft": 2457,
+      "med_sq_ft": 2255
+   },
+   "price": {
+      "sold_med_price": 221800,
+      "sold_avg_price": 272900
+   },
+   "story": {
+      "1_story": 128,
+      "2_story": 182,
+      "3_story": 13
+   }
+},
+ {
+   "year": 2011,
+   "total": 306,
+   "bath": {
+      "1_5_minus_bath": 7,
+      "2_baths": 97,
+      "2_5_baths": 111,
+      "3_plus_baths": 90
+   },
+   "bed": {
+      "2_minus_beds": 23,
+      "3_beds": 149,
+      "4_plus_beds": 134
+   },
+   "garage": {
+      "1_car_garage": 16,
+      "2_car_garage": 220,
+      "3_plus_car_garage": 59,
+      "carport": 1,
+      "no_garage_carport": 10
+   },
+   "sqft": {
+      "avg_sq_ft": 2494,
+      "med_sq_ft": 2295
+   },
+   "price": {
+      "sold_med_price": 227200,
+      "sold_avg_price": 267900
+   },
+   "story": {
+      "1_story": 127,
+      "2_story": 166,
+      "3_story": 13
+   }
+},
+ {
+   "year": 2012,
+   "total": 368,
+   "bath": {
+      "1_5_minus_bath": 6,
+      "2_baths": 99,
+      "2_5_baths": 140,
+      "3_plus_baths": 123
+   },
+   "bed": {
+      "2_minus_beds": 25,
+      "3_beds": 164,
+      "4_plus_beds": 179
+   },
+   "garage": {
+      "1_car_garage": 18,
+      "2_car_garage": 259,
+      "3_plus_car_garage": 76,
+      "carport": 2,
+      "no_garage_carport": 13
+   },
+   "sqft": {
+      "avg_sq_ft": 2585,
+      "med_sq_ft": 2390
+   },
+   "price": {
+      "sold_med_price": 245200,
+      "sold_avg_price": 292200
+   },
+   "story": {
+      "1_story": 129,
+      "2_story": 219,
+      "3_story": 20
+   }
+},
+ {
+   "year": 2013,
+   "total": 429,
+   "bath": {
+      "1_5_minus_bath": 4,
+      "2_baths": 113,
+      "2_5_baths": 154,
+      "3_plus_baths": 158
+   },
+   "bed": {
+      "2_minus_beds": 26,
+      "3_beds": 186,
+      "4_plus_beds": 218
+   },
+   "garage": {
+      "1_car_garage": 20,
+      "2_car_garage": 300,
+      "3_plus_car_garage": 98,
+      "carport": 1,
+      "no_garage_carport": 10
+   },
+   "sqft": {
+      "avg_sq_ft": 2662,
+      "med_sq_ft": 2478
+   },
+   "price": {
+      "sold_med_price": 268900,
+      "sold_avg_price": 324500
+   },
+   "story": {
+      "1_story": 156,
+      "2_story": 249,
+      "3_story": 24
+   }
+},
+ {
+   "year": 2014,
+   "total": 437,
+   "bath": {
+      "1_5_minus_bath": 3,
+      "2_baths": 120,
+      "2_5_baths": 140,
+      "3_plus_baths": 175
+   },
+   "bed": {
+      "2_minus_beds": 28,
+      "3_beds": 182,
+      "4_plus_beds": 227
+   },
+   "garage": {
+      "1_car_garage": 21,
+      "2_car_garage": 295,
+      "3_plus_car_garage": 108,
+      "carport": 1,
+      "no_garage_carport": 12
+   },
+   "sqft": {
+      "avg_sq_ft": 2707,
+      "med_sq_ft": 2526
+   },
+   "price": {
+      "sold_med_price": 288500,
+      "sold_avg_price": 347700
+   },
+   "story": {
+      "1_story": 168,
+      "2_story": 245,
+      "3_story": 24
+   }
+},
+ {
+   "year": 2015,
+   "total": 501,
+   "bath": {
+      "1_5_minus_bath": 3,
+      "2_baths": 135,
+      "2_5_baths": 161,
+      "3_plus_baths": 202
+   },
+   "bed": {
+      "2_minus_beds": 27,
+      "3_beds": 205,
+      "4_plus_beds": 270
+   },
+   "garage": {
+      "1_car_garage": 24,
+      "2_car_garage": 338,
+      "3_plus_car_garage": 126,
+      "carport": 2,
+      "no_garage_carport": 12
+   },
+   "sqft": {
+      "avg_sq_ft": 2724,
+      "med_sq_ft": 2524
+   },
+   "price": {
+      "sold_med_price": 294200,
+      "sold_avg_price": 352700
+   },
+   "story": {
+      "1_story": 196,
+      "2_story": 282,
+      "3_story": 24
+   }
+},
+ {
+   "year": 2016,
+   "total": 561,
+   "bath": {
+      "1_5_minus_bath": 4,
+      "2_baths": 155,
+      "2_5_baths": 182,
+      "3_plus_baths": 221
+   },
+   "bed": {
+      "2_minus_beds": 34,
+      "3_beds": 244,
+      "4_plus_beds": 283
+   },
+   "garage": {
+      "1_car_garage": 31,
+      "2_car_garage": 388,
+      "3_plus_car_garage": 124,
+      "carport": 2,
+      "no_garage_carport": 17
+   },
+   "sqft": {
+      "avg_sq_ft": 2650,
+      "med_sq_ft": 2466
+   },
+   "price": {
+      "sold_med_price": 307800,
+      "sold_avg_price": 360900
+   },
+   "story": {
+      "1_story": 221,
+      "2_story": 310,
+      "3_story": 31
+   }
+},
+ {
+   "year": 2017,
+   "total": 613,
+   "bath": {
+      "1_5_minus_bath": 5,
+      "2_baths": 171,
+      "2_5_baths": 189,
+      "3_plus_baths": 247
+   },
+   "bed": {
+      "2_minus_beds": 36,
+      "3_beds": 264,
+      "4_plus_beds": 313
+   },
+   "garage": {
+      "1_car_garage": 33,
+      "2_car_garage": 430,
+      "3_plus_car_garage": 131,
+      "carport": 4,
+      "no_garage_carport": 15
+   },
+   "sqft": {
+      "avg_sq_ft": 2645,
+      "med_sq_ft": 2457
+   },
+   "price": {
+      "sold_med_price": 323100,
+      "sold_avg_price": 384900
+   },
+   "story": {
+      "1_story": 245,
+      "2_story": 334,
+      "3_story": 34
+   }
+},
+ {
+   "year": 2018,
+   "total": 617,
+   "bath": {
+      "1_5_minus_bath": 5,
+      "2_baths": 183,
+      "2_5_baths": 197,
+      "3_plus_baths": 232
+   },
+   "bed": {
+      "2_minus_beds": 35,
+      "3_beds": 278,
+      "4_plus_beds": 303
+   },
+   "garage": {
+      "1_car_garage": 35,
+      "2_car_garage": 434,
+      "3_plus_car_garage": 129,
+      "carport": 3,
+      "no_garage_carport": 16
+   },
+   "sqft": {
+      "avg_sq_ft": 2602,
+      "med_sq_ft": 2435
+   },
+   "price": {
+      "sold_med_price": 326400,
+      "sold_avg_price": 385000
+   },
+   "story": {
+      "1_story": 254,
+      "2_story": 330,
+      "3_story": 33
+   }
+},
+ {
+   "year": 2019,
+   "total": 683,
+   "bath": {
+      "1_5_minus_bath": 5,
+      "2_baths": 225,
+      "2_5_baths": 208,
+      "3_plus_baths": 245
+   },
+   "bed": {
+      "2_minus_beds": 43,
+      "3_beds": 304,
+      "4_plus_beds": 336
+   },
+   "garage": {
+      "1_car_garage": 35,
+      "2_car_garage": 496,
+      "3_plus_car_garage": 133,
+      "carport": 2,
+      "no_garage_carport": 16
+   },
+   "sqft": {
+      "avg_sq_ft": 2518,
+      "med_sq_ft": 2322
+   },
+   "price": {
+      "sold_med_price": 321500,
+      "sold_avg_price": 383900
+   },
+   "story": {
+      "1_story": 309,
+      "2_story": 338,
+      "3_story": 35
+   }
+},
+ {
+   "year": 2020,
+   "total": 822,
+   "bath": {
+      "1_5_minus_bath": 7,
+      "2_baths": 253,
+      "2_5_baths": 261,
+      "3_plus_baths": 300
+   },
+   "bed": {
+      "2_minus_beds": 45,
+      "3_beds": 348,
+      "4_plus_beds": 430
+   },
+   "garage": {
+      "1_car_garage": 40,
+      "2_car_garage": 605,
+      "3_plus_car_garage": 157,
+      "carport": 3,
+      "no_garage_carport": 16
+   },
+   "sqft": {
+      "avg_sq_ft": 2527,
+      "med_sq_ft": 2333
+   },
+   "price": {
+      "sold_med_price": 336900,
+      "sold_avg_price": 391900
+   },
+   "story": {
+      "1_story": 362,
+      "2_story": 421,
+      "3_story": 39
+   }
+}
+]

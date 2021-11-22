@@ -85,7 +85,7 @@ class TvVis {
 				vis.wrangleData();
 			})
 
-		vis.bSvg = d3.select("#" + vis.parentElement).append("svg")
+		vis.timelineSvg = d3.select("#" + vis.parentElement).append("svg")
 			.attr("width", vis.width + vis.margin.left + vis.margin.right)
 			.attr("height", vis.bheight + vis.bmargin.bottom + vis.bmargin.top)
 			.append("g")
@@ -101,7 +101,7 @@ class TvVis {
 
 		 */
 
-		vis.timeline = vis.bSvg
+		vis.timelineSvg
 			.append("g")
 			.attr("class", "x brush")
 			.call(vis.brush)
@@ -110,7 +110,7 @@ class TvVis {
 		vis.xAxis = d3.axisBottom()
 			.scale(vis.timeScale)
 
-		vis.bSvg
+		vis.timelineSvg
 			.append('g')
 			.attr("transform", `translate(0,${vis.bheight})`)
 			.attr("class", "x x-axis")
