@@ -60,17 +60,16 @@
                 <!--<div class="align-self-center" id="vis0"></div>-->
             </div>
         </div>
-        <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
+        <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
                 <div class="col-md-6" class="visualization-container-left">
                     <div class="empty-visualization"></div>
-                    <!--<div class="align-self-center" id="vis0"></div>-->
                 </div>
                 <div class="col-md-4" class="visualization-container-right">
                     <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Visualization #2</h1>
                     <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Physiological: Food scarcity map visualization]
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <div class="container" class="section-4">
@@ -87,51 +86,56 @@
         <div class="col-md-6" class="visualization-container-right">
             <p class="paragraph-body visualization-title"><span>Title:</span> Home Price Index (HPI) and Percent Change vs. State <br><br>
                 <select class="form-control" id="variable-type">
-                <option value="HPI">Home Price Index (HPI)</option>
-                <option value="HPI_change">Annual change in HPI as a percent</option>
-            </select>
+                    <option value="HPI">Home Price Index (HPI)</option>
+                    <option value="HPI_change">Annual change in HPI as a percent</option>
+                </select>
             <div id="price-map"></div>
             <p class="paragraph-body visualization-source"><span>Source:</span> Federal Housing Finance Agency
                 <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
     </div>
-    <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
+    <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-6" class="visualization-container-left">
             <div class="empty-visualization"></div>
-            <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
         <div class="col-md-4" class="visualization-container-right">
             <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Visualization #4</h1>
             <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Safety/Security: Placeholder visualization]
         </div>
-    </div>
+    </div>-->
 </div>
 
 <div class="container" class="section-5">
     <div class="justify-content-center visualization-header">
         <h1 class="main-header-label visualization-header-text" data-aos="fade-up" data-aos-duration="900">Maslow's Third Tier: Love/Belonging Needs</h1>
-        <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">Our house doesn’t just provide us with a place to live, it also plays an important social and societal role Let’s look at how moving trends across the US have changed...
+        <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">Our house doesn’t just provide us with a place to live, it also plays an important social and societal role. From this standpoint, the volume and direction of migration to new communities speaks volumes about peoples' societal values. Let’s look at the states people are moving into and out of at the highest rates...
     </div>
     <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-4" class="visualization-container-left">
-            <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Visualization #5</h1>
-            <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Love/Belonging: Migration/transition/moves in the US across states]
+            <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Direction of moves</h1>
+            <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">This pair of bar graphs uses data from the moving company, United Van Lines, and its annual report. UVL tracks the relocation tendencies of its customers, including what percentage of shipments are inbound (entering the state) or outbound (leaving it). A full breakdown of the data collection process can be found <a href="https://www.unitedvanlines.com/newsroom/movers-study-2020" target="_blank">here</a>.<br><br> The general direction of movement appears to trend towards the South and West, with Idaho and South Carolina being among the states with the highest inbound percentage. Conversely, many states with the greatest amount of outbound flow are clustered in the North East.
         </div>
         <div class="col-md-6" class="visualization-container-right">
-            <div class="empty-visualization"></div>
-            <!--<div class="align-self-center" id="vis0"></div>-->
+            <p class="paragraph-body visualization-title"><span>Title:</span> Top 10 States by Volume of Inbound and Outbound Moving Shipments <br><br>
+                <select class="form-control" id="movement-shipment-type">
+                <option value="inbound">Inbound percentage</option>
+                <option value="outbound">Outbound percentage</option>
+            </select>
+            <div id="inboundGraphContainer"></div>
+            <div id="outboundGraphContainer" style="display:none;"></div>
+            <p class="paragraph-body visualization-source"><span>Source:</span> Annual 2020 United Van Lines National Movers Study
+                <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
     </div>
-    <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
+    <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-6" class="visualization-container-left">
             <div class="empty-visualization"></div>
-            <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
         <div class="col-md-4" class="visualization-container-right">
             <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Visualization #6</h1>
             <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Love/Belonging: Placeholder visualization]
         </div>
-    </div>
+    </div>-->
 </div>
 
 <div class="container" class="section-6">
@@ -219,10 +223,12 @@
 <script src="js/tvVis.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/homePriceIndexMap.js"></script>
+<script src="js/stateMovementBarChart.js"></script>
 
 <!-- Load data, create visualizations -->
 <script src="js/main.js"></script>
 <script src="js/homePriceIndexMap_main.js"></script>
+<script src="js/stateMovementBarChart_main.js"></script>
 
 </body>
 </html>

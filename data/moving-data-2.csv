@@ -1,0 +1,11 @@
+StateName,Total_Shipments,Inbound_Shipments,Outbound_Shipments,Inbound_Percent,Outbound_Percent
+New Jersey,3525,1074,2451,30,70
+New York,5913,1960,3953,33,67
+Illinois,5782,1942,3840,34,66
+Connecticut,1867,682,1185,37,63
+California,16664,6888,9776,41,59
+Kansas,1865,773,1092,41,59
+North Dakota,406,176,230,43,57
+Massachusetts,3355,1455,1990,43,57
+Ohio,4376,1923,2453,44,56
+Maryland,2965,1333,1632,45,55
