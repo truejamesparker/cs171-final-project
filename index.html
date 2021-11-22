@@ -18,6 +18,7 @@
     <!--<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/leaflet.css">
 </head>
@@ -52,12 +53,22 @@
         </div>
         <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
             <div class="col-md-4" class="visualization-container-left">
-                <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Visualization #1</h1>
-                <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Physiological: Physical characteristics of US homes visualization]
+                <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">American home anatomy</h1>
+                <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">
+                    The US Census Bureau's Survey of Construction (Soc) provides a glimpse into the physiological
+                    trends of new Single Family (SF) units sold within the US economy.<br><br>
+                    Notably, home sizes have increased a staggering 67% from the 1980s. However, while Americans are
+                    demanding more space, it's unclear whether this has actually led to increased homeowner satisfaction.
+                    <a href="https://www.theatlantic.com/family/archive/2019/06/big-houses-american-happy/591433/">New research</a>
+                    published by the Atlantic suggests that (perhaps unsurprisingly) homeowners regularly compare their
+                    homes to those of their neighbors. While the physiological aspects of a home are certainly
+                    foundational, it's clear that housing is far more than just shelter.
+                </p>
             </div>
             <div class="col-md-6" class="visualization-container-right">
                 <div class="row">
                     <div class="text-center">
+                        <p class="paragraph-body visualization-title"><span>Title:</span> Physical Characteristics of Single Family Homes Sold<br><br>
                         <div id="physButtonGroup" class="btn-group" role="group">
                             <button id="bed" type="button" class="btn btn-secondary">Beds</button>
                             <button id="bath" type="button" class="btn btn-secondary">Baths</button>
@@ -70,6 +81,7 @@
                 <div class="row">
                     <div id="physical"></div>
                 </div>
+                <p class="paragraph-body visualization-source"><span>Source:</span> Survey of Construction, US Census Bureau
             </div>
         </div>
         <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
@@ -120,7 +132,7 @@
 <div class="container" class="section-5">
     <div class="justify-content-center visualization-header">
         <h1 class="main-header-label visualization-header-text" data-aos="fade-up" data-aos-duration="900">Maslow's Third Tier: Love/Belonging Needs</h1>
-        <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">Our house doesn’t just provide us with a place to live, it also plays an important social and societal role. From this standpoint, the volume and direction of migration to new communities speaks volumes about peoples' societal values. Let’s look at the states people are moving into and out of at the highest rates...
+        <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">Our house doesn’t just provide us with a place to live, it also plays an important social role. The direction of migration to new communities is largely a reflection of people's changing societal values. Let’s look at the states people are moving into and out of at the highest rates...
     </div>
     <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-4" class="visualization-container-left">
@@ -195,7 +207,7 @@
     </div>
     <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-4" class="visualization-container-left">
-            <h1 class="main-header-label visualization-label" data-aos="fade-up" data-aos-duration="900">Home Ownership and the American Dream</h1>
+            <h1 class="main-header-label visualization-label" data-aos="fade-up" data-aos-duration="900">Home ownership and the American Dream</h1>
             <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">This bar graph shows the percentage of US Citizens that associate home ownership with their perception of The American Dream from 2010-2018. It's no secret that owning a house can make one feel like they've "made it" in life and in the USA, and the data bear that out.
         </div>
         <div class="col-md-6" class="visualization-container-right">
@@ -205,15 +217,49 @@
             <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
     </div>
-    <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
+    <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-6" class="visualization-container-left">
             <div class="empty-visualization"></div>
-            <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
         <div class="col-md-4" class="visualization-container-right">
             <h1 class="main-header-label visualization-label" data-aos="fade-up" data-aos-duration="900">Visualization #7</h1>
             <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">[Self-actualization: Placeholder visualization]
         </div>
+    </div>-->
+</div>
+
+<div class="conclusion">
+    <div class="container" class="section-8">
+        <div class="justify-content-center visualization-header">
+            <h1 class="main-header-label visualization-header-text conclusion-text" data-aos="fade-up" data-aos-duration="900">Authors</h1>
+            <div class="row justify-content-center">
+                <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="conclusion-holder">
+                        <div class="bio-circle james"></div>
+                        <p class="paragraph-body conclusion-name">James Parker</p>
+                        <p class="paragraph-body conclusion-college">Harvard Business School <br> Class of 2021</p>
+                        <a href="https://www.linkedin.com/in/jparker22/" target="_blank"><i class="fa fa-linkedin-square linkedin-icon"></i></a>
+
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="conclusion-holder">
+                        <div class="bio-circle david"></div>
+                        <p class="paragraph-body conclusion-name">David Hacker</p>
+                        <p class="paragraph-body conclusion-college">Harvard College <br> Class of 2023</p>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="conclusion-holder">
+                        <div class="bio-circle ethan"></div>
+                        <p class="paragraph-body conclusion-name">Ethan McFarlin</p>
+                        <p class="paragraph-body conclusion-college">Harvard College <br> Class of 2024</p>
+                        <a href="https://www.linkedin.com/in/ethan-mcfarlin/?trk=public_profile_browsemap" target="_blank"><i class="fa fa-linkedin-square linkedin-icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

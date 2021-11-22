@@ -39,7 +39,7 @@ h3 {
 
 #home-hero {
   width: 100vw;
-  // height: 100vh;
+  /*height: 100vh;*/
   background-image: url("/cs171-final-project/img/home-hero-background.jpg");
   background-size: cover;
 }
@@ -170,4 +170,55 @@ h3 {
 
 .home {
   color: orange;
+}
+
+.conclusion-text {
+  margin-bottom: 60px;
+}
+
+.bio-circle {
+  width:175px;
+  height:175px;
+  border-radius: 87.5px;
+  /*background:red;*/
+}
+
+.james {
+  background-image: url("/img/portraits/james.jpg");
+}
+
+.ethan {
+  background-image: url("/img/portraits/ethan.jpg");
+}
+
+.david {
+  background-image: url("/img/portraits/david.jpg");
+}
+
+.conclusion-holder {
+  display: block;
+  text-align: center;
+}
+
+.conclusion-name {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.bio-circle:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.5 all ease;
+}
+
+.linkedin-icon {
+  font-size:24px;
+  color:#DFAAFB;
+  padding-bottom:250px;
+}
+
+.conclusion {
+  width: 100vw;
+  /*height: 100vh;*/
+  background-image: url("/cs171-final-project/img/conclusion-background.jpg");
+  background-size: cover;
 }
