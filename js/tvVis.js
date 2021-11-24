@@ -219,9 +219,7 @@ class TvVis {
 						  	  <div id="tv-stats">
 								<h3></h3>
 								<img style="max-width: 100%; max-height: 100%">
-							  </div>
-                           
-                                                                                    
+							  </div>                                                          
                          </div>`);
 		})
 			.on('mouseout', function (event, d) {

@@ -39,10 +39,9 @@ class AmericanDreamVis {
         vis.x = d3.scaleBand()
             .rangeRound([0, vis.width])
             .paddingInner(0.1);
-        console.log(vis.height)
         vis.y = d3.scaleLinear()
             .domain([0, 100])
-            .range([vis.height, 0]);
+            .range([vis.height * 0.3, vis.height]);
 
         vis.svg.append("rect")
             .attr("x", vis.width/4)
@@ -112,20 +111,19 @@ class AmericanDreamVis {
         // TODO
 
         vis.displayData = vis.data;
-        console.log(vis.data.map(d=>d.Percent))
-        vis.bars = vis.svg.selectAll("rect")
+        vis.bars = vis.svg.selectAll(".stripe")
             .data(vis.displayData,d=>d)
         vis.bars.enter().append("rect")
+            .attr("class", "stripe")
             .attr("x", (d,i)=> i * 30+vis.width/4)
-            .attr("y", d=>vis.y(d.Percent))
+            .attr("y", vis.height * 0.3)
             .attr("width", 15)
-            .attr("height", d => vis.height - vis.y(d["Percent"]))
-            .attr("fill", "#B22234")
+            .attr("height", d=> vis.y(100 - d.Percent))
+            // .attr("fill", "#B22234")
+            .attr("fill", "url(#stripeGradient)")
             .on('mouseover', function(event, d){
                 d3.select(this)
-                    .attr('stroke-width', '2px')
-                    .attr('stroke', 'black')
-                    .attr('fill', 'rgba(173,222,255,0.62)');
+                    .attr('fill', "url(#stripeGradientSelected)");
                 vis.tooltip
                     .style("opacity", 1)
                     .style("left", event.pageX + 20 + "px")
@@ -138,8 +136,7 @@ class AmericanDreamVis {
             })
             .on('mouseout', function(event, d){
                 d3.select(this)
-                    .attr('stroke-width', '0px')
-                    .attr("fill", "#B22234")
+                    .attr("fill", "url(#stripeGradient)")
 
                 vis.tooltip
                     .style("opacity", 0)
@@ -149,7 +146,6 @@ class AmericanDreamVis {
             });
 
 
-        console.log(vis.displayData)
         // Update the visualization
         vis.updateVis();
     }

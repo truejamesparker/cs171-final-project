@@ -9,9 +9,6 @@ d3.csv("data/HPI_AT_BDL_state.csv").then(csv=> {
         state_HPI_data[d.FIPS] = d.HPI;
         state_HPI_change_data[d.FIPS] = d.HPI_change;
     });
-
-    console.log("here", csv)
-
 });
 
 d3.json("data/us-states.json").then(jsonData =>{
