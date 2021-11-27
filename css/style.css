@@ -249,7 +249,7 @@ h3 {
   text-align: left;
   max-width: 40em;
   background: white;
-  padding-left: 2em;
+  padding: 2em;
   font: 0.75em Montserrat;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 4px;
