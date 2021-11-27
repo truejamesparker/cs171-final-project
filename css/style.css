@@ -184,15 +184,15 @@ h3 {
 }
 
 .james {
-  background-image: url("/img/portraits/james.jpg");
+  background-image: url("../img/portraits/james.jpg");
 }
 
 .ethan {
-  background-image: url("/img/portraits/ethan.jpg");
+  background-image: url("../img/portraits/ethan.jpg");
 }
 
 .david {
-  background-image: url("/img/portraits/david.jpg");
+  background-image: url("../img/portraits/david.jpg");
 }
 
 .conclusion-holder {
@@ -244,13 +244,13 @@ h3 {
   filter: invert(92%) sepia(76%) saturate(4243%) hue-rotate(205deg) brightness(88%) contrast(98%);
 }
 
-.shipmentsTooltip, .housingShowTooltip {
+.shipmentsTooltip, .housingShowTooltip, .dreamTooltip {
   position: absolute;
   text-align: left;
-  width: 250px;
+  max-width: 40em;
   background: white;
-  padding: 20px;
-  font: 12px Montserrat;
+  padding: 2em;
+  font: 0.75em Montserrat;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 4px;
   /*border-top: 8px solid #E8F0FC;*/

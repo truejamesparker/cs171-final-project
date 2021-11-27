@@ -19,7 +19,7 @@ class AmericanDreamVis {
         let vis = this;
 
         vis.tooltip = d3.select("body").append('div')
-            .attr('class', "tooltip")
+            .attr('class', "dreamTooltip")
             .attr('id', 'dreamTooltip')
 
         // TODO
@@ -48,7 +48,7 @@ class AmericanDreamVis {
             .attr("y", 0)
             .attr("width", 15 * 17)
             .attr("height", vis.height* 0.3)
-            .attr("fill", "#3C3B6E");
+            .attr("fill", "url(#blueFieldGradient)");
 
         for (let i = 0; i < 10; i++) {
             vis.svg.append("path")
@@ -129,10 +129,10 @@ class AmericanDreamVis {
                     .style("left", event.pageX + 20 + "px")
                     .style("top", event.pageY + "px")
                     .html(`
-         <div style="border: thin solid grey; border-radius: 5px; background: white; padding: 20px">
-             <h4>${d.Year}</h4>      
-             <h4>${d.Percent} %</h4>                    
-         </div>`);
+                         <div>
+                             <p><span class="shipment-tooltip-emphasis">Year:</span> ${d.Year}</p>
+                             <p><span class="shipment-tooltip-emphasis">Percent:</span> ${d.Percent}</p>                 
+                         </div>`);
             })
             .on('mouseout', function(event, d){
                 d3.select(this)
