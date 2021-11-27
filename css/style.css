@@ -184,15 +184,15 @@ h3 {
 }
 
 .james {
-  background-image: url("/img/portraits/james.jpg");
+  background-image: url("../img/portraits/james.jpg");
 }
 
 .ethan {
-  background-image: url("/img/portraits/ethan.jpg");
+  background-image: url("../img/portraits/ethan.jpg");
 }
 
 .david {
-  background-image: url("/img/portraits/david.jpg");
+  background-image: url("../img/portraits/david.jpg");
 }
 
 .conclusion-holder {
