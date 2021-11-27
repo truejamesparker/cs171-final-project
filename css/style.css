@@ -158,7 +158,7 @@ h3 {
 }
 
 #physButtonGroup .btn-secondary {
-  background-color: steelblue;
+  background-color: #DFAAFB;
   border-color: white;
 }
 
@@ -249,7 +249,7 @@ h3 {
   text-align: left;
   width: 250px;
   background: white;
-  padding: 20px;
+  padding-left: 20px;
   font: 12px Montserrat;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 4px;
@@ -258,4 +258,8 @@ h3 {
 
 .shipment-tooltip-emphasis {
   font-weight: 600;
+}
+
+.first-text {
+  margin-top: 15px;
 }

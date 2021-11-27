@@ -84,7 +84,7 @@ class FamousVis {
 	updateVis() {
 		let vis = this;
 
-		console.log(vis.displayData)
+		// console.log(vis.displayData)
 
 		function getRandomInt(min, max) {
 			min = Math.ceil(min);

@@ -81,7 +81,7 @@ class TvVis {
 			.extent([[vis.margin.left,0], [vis.width - vis.margin.right, vis.bheight]])
 			.on("brush", function (event) {
 				vis.selectedTime = event.selection.map(vis.timeScale.invert)
-				console.log(vis.selectedTime)
+				// console.log(vis.selectedTime)
 				vis.wrangleData();
 			})
 

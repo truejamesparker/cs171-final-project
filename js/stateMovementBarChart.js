@@ -153,7 +153,7 @@ class StateMovementBarChart {
 				.style("top", event.pageY + "px")
 				.html(`
                          <div>
-                             <p><span class="shipment-tooltip-emphasis">State:</span> ${d.StateName}</p>
+                             <p class="first-text"><span class="shipment-tooltip-emphasis">State:</span> ${d.StateName}</p>
                              <p><span class="shipment-tooltip-emphasis">Total Shipments:</span> ${d.Total_Shipments}</p>                 
                              <p><span class="shipment-tooltip-emphasis">Inbound Shipments:</span> ${d.Inbound_Shipments}</p>                                              
                              <p><span class="shipment-tooltip-emphasis">Outbound Shipments:</span> ${d.Outbound_Shipments}</p> 
