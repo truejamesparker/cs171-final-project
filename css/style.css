@@ -37,6 +37,18 @@ h3 {
   font-weight: 400;
 }
 
+/*.rectangle-highlight {
+  background: #EBF2FF;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  width: 75%;
+  margin-left:12%;
+  height: 30px;
+  transform:translateY(-43px);
+  z-index: 4;
+}*/
+
 #home-hero {
   width: 100vw;
   /*height: 100vh;*/
@@ -219,39 +231,12 @@ h3 {
 .conclusion {
   width: 100vw;
   /*height: 100vh;*/
-  background-image: url("/cs171-final-project/img/conclusion-background.jpg");
+  /*background-image: url("/cs171-final-project/img/conclusion-background.jpg");*/
   background-size: cover;
 }
 
 #famous {
   transform: scale(0.92);
-}
-
-.home {
-  filter: invert(82%) sepia(40%) saturate(465%) hue-rotate(195deg) brightness(101%) contrast(97%);
-}
-
-.home-2 {
-  filter: invert(96%) sepia(42%) saturate(3348%) hue-rotate(177deg) brightness(101%) contrast(98%);
-
-
-}
-.home-3 {
-  filter: invert(96%) sepia(42%) saturate(3348%) hue-rotate(177deg) brightness(101%) contrast(98%);
-
-
-}
-
-.home-4 {
-  filter: invert(68%) sepia(71%) saturate(797%) hue-rotate(207deg) brightness(106%) contrast(97%);
-
-
-}
-
-.home-5 {
-  filter: invert(92%) sepia(76%) saturate(4243%) hue-rotate(205deg) brightness(88%) contrast(98%);
-
-
 }
 
 .shipmentsTooltip, .housingShowTooltip, .dreamTooltip, #famousTooltip {
@@ -264,6 +249,10 @@ h3 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 4px;
   /*border-top: 8px solid #E8F0FC;*/
+}
+
+.dreamTooltip {
+  max-width: 250px;
 }
 
 .shipment-tooltip-emphasis, .famoushomes-tooltip-emphasis {

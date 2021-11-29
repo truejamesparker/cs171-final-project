@@ -130,8 +130,7 @@ class AmericanDreamVis {
                     .style("top", event.pageY + "px")
                     .html(`
                          <div>
-                             <p><span class="shipment-tooltip-emphasis">Year:</span> ${d.Year}</p>
-                             <p><span class="shipment-tooltip-emphasis">Percent:</span> ${d.Percent}</p>                 
+                             <p>In<span class="shipment-tooltip-emphasis"> ${d.Year}</span>, a reported<span class="shipment-tooltip-emphasis"> ${d.Percent}%</span> of surveyed Americans associated home ownership with the American dream.</p>
                          </div>`);
             })
             .on('mouseout', function(event, d){
