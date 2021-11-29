@@ -16,7 +16,27 @@ class PhysVis {
 		this.displayData = null;
 		this.selectedTime = null;
 		this.dataType = 'bath';
-		this.colors = ["#cfe0fe", "#ebf2ff", "#ebf2ff", "#dfabfb"]
+		this.colors = ["#98BAE7", "#6E3CBC", "#B8E4F0", "#7267CB"]
+
+		this.field2label = {
+			"1_5_minus_bath": "<1.5 baths",
+			"2_baths": "2 baths",
+			"2_5_baths": "2.5 baths",
+			"3_plus_baths": ">3 baths",
+			"2_minus_beds": "<2 baths",
+			"3_beds": "3 beds",
+			"4_plus_beds": ">4 beds",
+			"1_car_garage": "1 car garage",
+			"2_car_garage": "2 car garage",
+			"3_plus_car_garage": ">3 car garage",
+			"carport": "carport",
+			"no_garage_carport": "no garage/carport",
+			"1_story": "1-story",
+			"2_story": "2-story",
+			"3_story": "3-story",
+			"avg_sq_ft": "average sq ft",
+			"med_sq_ft": "median sq ft"
+		}
 
 		this.initVis();
 	}
@@ -86,6 +106,15 @@ class PhysVis {
 			.domain(d3.extent(vis.data, d => {return d.year}))
 			.range([vis.margin.left, vis.width - vis.margin.right])
 
+		vis.colorScale = d3.scaleOrdinal()
+			.range(this.colors)
+
+		vis.legend = d3.legendColor()
+			.scale(vis.colorScale)
+
+		vis.legendGroup = vis.svg.append("g")
+			.attr("transform", `translate(${vis.width - vis.margin.left},${0})`)
+
 		vis.xScale = d3.scaleLinear()
 			.domain(d3.extent(vis.data, d => {return d.year}))
 			.range([vis.margin.left, vis.width - vis.margin.right])
@@ -143,8 +172,6 @@ class PhysVis {
 	wrangleData () {
 		let vis = this;
 
-		let tempData = []
-
 		// TODO
 		switch (vis.dataType) {
 			case "bath":
@@ -192,7 +219,6 @@ class PhysVis {
 		vis.yScale
 			.domain([0, getMax(vis.displayData)])
 
-
 		vis.xScale
 			.domain(vis.selectedTime)
 
@@ -202,6 +228,8 @@ class PhysVis {
 			.duration(1000)
 			.call(vis.yAxis)
 
+		vis.colorScale.domain(vis.fields.map(field => vis.field2label[field]))
+		vis.legendGroup.call(vis.legend)
 
 		vis.fields.forEach((l, i) => {
 			let data = vis.displayData.map(d => {

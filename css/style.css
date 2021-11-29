@@ -273,3 +273,8 @@ h3 {
 .first-text {
   margin-top: 15px;
 }
+
+.cell .label {
+  font-family: Montserrat;
+  font-size: 0.5em;
+}
