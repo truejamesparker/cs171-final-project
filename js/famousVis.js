@@ -97,32 +97,37 @@ class FamousVis {
 		vis.svg.selectAll(".home")
 			.data(vis.displayData)
 			.enter()
-			.append("svg:image")
-			.attr("class", function(d) {
+			.append("circle")
+			//.append("vis:img")
+			.attr("fill", function(d) {
 				if (d.sqft > 100000) {
-					return "home"
-				} else if (d.sqft > 80000) {
-					return "home-2"
-				} else if (d.sqft > 60000) {
-					return "home-3"
-				} else if (d.sqft > 50000) {
-					return "home-4"
+					return "#DFAAFB"
+				} else if (d.sqft > 90000) {
+					return "#dbb7fc"
+				}
+			 	else if (d.sqft > 60000) {
+					return "#d7c3fc"
+				}
+				else if (d.sqft > 40000) {
+					return "#d3d1fc"
 				}
 				else {
-					return "home-5"
-					// d.svg.fill = "color"
+					return "#cfe0fd"
 				}
 			})
-			.attr("xlink:href", "img/mansion.svg")
-			.attr("x", d => vis.x(d.completed))
-			.attr("y", (d,i) => d.sqft*0.0021)
-			.attr("width", d => vis.s(d.sqft))
-			.attr("height", d => vis.s(d.sqft))
+			.attr("opacity", 0.6)
+			// .attr("xlink:href", "img/mansion.svg")
+			.attr("cx", d => vis.x(d.completed))
+			.attr("cy", (d,i) => d.sqft*0.0021)
+			.attr("r", (d,i) => d.sqft*0.00015)
+			// .attr("width", d => vis.s(d.sqft))
+			// .attr("height", d => vis.s(d.sqft))
 			.on('mouseover', function(event, d){
 				d3.select(this)
 					.attr('stroke-width', '2px')
 					.attr('stroke', 'black')
-					.attr('fill', 'rgba(173,222,255,0.62)');
+					.attr("opacity", 1)
+					// .attr('fill', 'rgba(173,222,255,0.62)');
 				vis.tooltip
 					.style("opacity", 1)
 					.style("left", event.pageX + 20 + "px")
@@ -144,7 +149,7 @@ class FamousVis {
 			.on('mouseout', function(event, d){
 				d3.select(this)
 					.attr('stroke-width', '0px')
-					.attr("fill", "#B22234")
+					.attr('opacity', 0.6)
 
 				vis.tooltip
 					.style("opacity", 0)
