@@ -81,7 +81,6 @@ class TvVis {
 			.extent([[vis.margin.left,0], [vis.width - vis.margin.right, vis.bheight]])
 			.on("brush", function (event) {
 				vis.selectedTime = event.selection.map(vis.timeScale.invert)
-				// console.log(vis.selectedTime)
 				vis.wrangleData();
 			})
 
@@ -123,7 +122,7 @@ class TvVis {
 
 		vis.tooltip = d3.select("body").append('div')
 			.attr('class', "housingShowTooltip")
-			.attr('id', 'barTooltip')
+			.attr('id', 'showTooltip')
 
 		vis.wrangleData();
 	}
@@ -168,12 +167,9 @@ class TvVis {
             .attr("cx", vis.width/2)
             .attr("cy", vis.height/2)
 			.on('mousedown', function(event, d) {
-				console.log("go here ethan", d)
 				event.target.setAttribute("defaultFill", event.target.getAttribute("fill"))
 				d3.select(this)
 					.attr("fill", function(d) { return `url(#${d.id})`; })
-				// document.querySelector("#tv-stats h3").innerText = d.title;
-				document.querySelector("#tv-stats img").src = d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png";
 			})
 			.on('mouseup', function(event, d) {
 				d3.select(this).attr("fill", event.target.getAttribute("defaultFill"))
@@ -211,14 +207,13 @@ class TvVis {
 				.style("left", event.pageX + 20 + "px")
 				.style("top", event.pageY + "px")
 				.html(`
-                         <div style="padding-top: 25px;">
+                         <div>
                              <p><span class="shipment-tooltip-emphasis">Show Name:</span> ${d.title}</p>
                               <p><span class="shipment-tooltip-emphasis">Episode Count:</span> ${d.episodes}</p>
                               <p><span class="shipment-tooltip-emphasis">Genre(s):</span> ${d.genres}</p>
                               <p><span class="shipment-tooltip-emphasis">Rating:</span> ${d.rating}</p>
-						  	  <div id="tv-stats">
-								<h3></h3>
-								<img style="max-width: 100%; max-height: 100%">
+						  	  <div id="tv-stats" style="text-align: center">
+								<img src=${d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png"} style="max-width: 100%; max-height: 10em">			
 							  </div>                                                          
                          </div>`);
 		})
