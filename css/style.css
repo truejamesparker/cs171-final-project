@@ -225,7 +225,6 @@ h3 {
 
 #famous {
   transform: scale(0.92);
-
 }
 
 .home {
@@ -235,16 +234,27 @@ h3 {
 .home-2 {
   filter: invert(96%) sepia(42%) saturate(3348%) hue-rotate(177deg) brightness(101%) contrast(98%);
 
+
 }
 .home-3 {
-  filter: invert(68%) sepia(71%) saturate(797%) hue-rotate(207deg) brightness(106%) contrast(97%);
+  filter: invert(96%) sepia(42%) saturate(3348%) hue-rotate(177deg) brightness(101%) contrast(98%);
+
+
 }
 
 .home-4 {
-  filter: invert(92%) sepia(76%) saturate(4243%) hue-rotate(205deg) brightness(88%) contrast(98%);
+  filter: invert(68%) sepia(71%) saturate(797%) hue-rotate(207deg) brightness(106%) contrast(97%);
+
+
 }
 
-.shipmentsTooltip, .housingShowTooltip, .dreamTooltip {
+.home-5 {
+  filter: invert(92%) sepia(76%) saturate(4243%) hue-rotate(205deg) brightness(88%) contrast(98%);
+
+
+}
+
+.shipmentsTooltip, .housingShowTooltip, .dreamTooltip, #famousTooltip {
   position: absolute;
   text-align: left;
   max-width: 40em;
@@ -256,7 +266,7 @@ h3 {
   /*border-top: 8px solid #E8F0FC;*/
 }
 
-.shipment-tooltip-emphasis {
+.shipment-tooltip-emphasis, .famoushomes-tooltip-emphasis {
   font-weight: 600;
 }
 

@@ -30,7 +30,7 @@ class FamousVis {
 		vis.margin = { top: 0, right: 40, bottom: 40, left: 20 };
 
 		vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-		vis.height = 200 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
+		vis.height = 500 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
 
 		// SVG drawing area
 		vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -61,7 +61,7 @@ class FamousVis {
 			.attr('id', 'famousTooltip')
 
 		vis.s = d3.scaleLinear()
-			.range([0, Math.sqrt(5000)])
+			.range([10, Math.sqrt(5000)])
 			.domain(d3.extent(vis.data, d => d.sqft))
 
 		vis.wrangleData();
@@ -76,6 +76,7 @@ class FamousVis {
 
 		// TODO
 		vis.displayData = vis.data
+		console.log("focus here", vis.data)
 
 		// Update the visualization
 		vis.updateVis();
@@ -98,20 +99,23 @@ class FamousVis {
 			.enter()
 			.append("svg:image")
 			.attr("class", function(d) {
-				let randomNumber = getRandomInt(0, 4);
-				if (randomNumber == 1) {
+				if (d.sqft > 100000) {
 					return "home"
-				} else if (randomNumber == 2) {
+				} else if (d.sqft > 80000) {
 					return "home-2"
-				} else if (randomNumber == 3) {
+				} else if (d.sqft > 60000) {
 					return "home-3"
-				} else {
+				} else if (d.sqft > 50000) {
 					return "home-4"
+				}
+				else {
+					return "home-5"
+					// d.svg.fill = "color"
 				}
 			})
 			.attr("xlink:href", "img/mansion.svg")
 			.attr("x", d => vis.x(d.completed))
-			.attr("y", (d,i) => 50)
+			.attr("y", (d,i) => d.sqft*0.0021)
 			.attr("width", d => vis.s(d.sqft))
 			.attr("height", d => vis.s(d.sqft))
 			.on('mouseover', function(event, d){
@@ -124,9 +128,17 @@ class FamousVis {
 					.style("left", event.pageX + 20 + "px")
 					.style("top", event.pageY + "px")
 					.html(`
-         <div style="border: thin solid grey; border-radius: 5px; background: white; padding: 20px">
-             <a href="https://en.wikipedia.org/wiki/${d.name.split(' ').join('_')}">${d.name}</a>      
-             <h6>${d.sqft} square feet</h6>                    
+         <div>
+             <!--<a href="https://en.wikipedia.org/wiki/$//{d.name.split(' ').join('_')}">$//{d.name}</a> -->   
+             <p><span class="famoushomes-tooltip-emphasis">Name:</span> ${d.name}</p>                
+             <p><span class="famoushomes-tooltip-emphasis">Square Feet:</span> ${d.sqft}</p>   
+             <p><span class="famoushomes-tooltip-emphasis">Architect:</span> ${d.architect}</p>   
+             <p><span class="famoushomes-tooltip-emphasis">Built For:</span> ${d.builtfor}</p>   
+		     <p><span class="famoushomes-tooltip-emphasis">Current Owner:</span> ${d.owner}</p>     
+		     <p><span class="famoushomes-tooltip-emphasis">Rank:</span> ${d.rank}</p>  
+			 <img src="${d.image}">
+
+                      
          </div>`);
 			})
 			.on('mouseout', function(event, d){
@@ -147,7 +159,7 @@ class FamousVis {
 			.scale(vis.y)
 
 		vis.svg.select(".x-axis")
-			.attr("transform", "translate(" + vis.margin.left + ",118)")
+			.attr("transform", "translate(" + vis.margin.left + ",470)")
 			.style("stroke-width", 2)
 			.transition()
 			.call(vis.xAxis);
