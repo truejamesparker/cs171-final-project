@@ -1,0 +1,40 @@
+<?xml version="1.0"?><svg width="720" height="540" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd">
+ <desc>Pyramid</desc>
+ <defs>
+  <filter id="l">
+   <!-- licht donkerder -->
+  </filter>
+  <filter id="d">
+   <!--  donkerder -->
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="pyramid">
+   <g fill="RoyalBlue" id="layer5">
+    <polygon fill="#46a5e5" id="svg_1" points="100.215,379.094 576.769,379.094 626.985,333.656 168.154,333.656" filter="url(#d)"/>
+    <polygon fill="#46a5e5" id="svg_2" points="629.938,440 576.769,379.094 626.985,333.656 690,385.861" opacity="0.8;" filter="url(#l)"/>
+    <polygon fill="#46a5e5" id="svg_3" points="100.215,379.094 576.769,379.094 629.938,440 50,440"/>
+   </g>
+   <g fill="CornflowerBlue" id="layer4">
+    <polygon fill="#46a5e5" id="svg_4" points="160.277,306.587 517.692,306.587 556.092,272.751 231.169,272.751" filter="url(#d)"/>
+    <polygon fill="#46a5e5" id="svg_5" points="568.892,369.427 517.692,306.587 556.092,272.751 618.123,325.922" opacity="0.8;" filter="url(#l)"/>
+    <polygon fill="#46a5e5" id="svg_6" points="110.062,369.427 568.892,369.427 517.692,306.587 160.277,306.587"/>
+   </g>
+   <g fill="DeepSkyBlue" id="layer3">
+    <polygon fill="#46a5e5" id="svg_7" points="219.354,236.014 458.615,236.014 483.231,213.778 286.308,213.778" filter="url(#d)"/>
+    <polygon fill="#46a5e5" id="svg_8" points="458.615,236.014 510.8,296.92 546.246,265.983 484.215,213.778" opacity="0.8;" filter="url(#l)"/>
+    <polygon fill="#46a5e5" id="svg_9" points="169.138,296.92 510.8,296.92 458.615,236.014 219.354,235.047"/>
+   </g>
+   <g fill="LightSkyBlue" id="layer2">
+    <polygon fill="#46a5e5" id="svg_10" points="280.4,163.507 399.538,163.507 412.338,151.906 321.754,151.906" filter="url(#d)"/>
+    <polygon fill="#46a5e5" id="svg_11" points="450.738,225.38 474.369,204.111 412.338,151.906 399.538,163.507" opacity="0.8;" filter="url(#l)"/>
+    <polygon fill="#46a5e5" id="svg_12" points="228.215,225.38 450.738,225.38 399.538,163.507 280.4,163.507"/>
+   </g>
+   <g fill="PowderBlue" id="layer1">
+    <polygon fill="#46a5e5" id="svg_13" points="287.292,152.873 390.677,152.873 339.477,91"/>
+    <polygon fill="#46a5e5" id="svg_14" points="390.677,152.873 402.492,143.205 339.477,91" opacity="0.8;" filter="url(#l)"/>
+   </g>
+  </g>
+ </g>
+</svg>
