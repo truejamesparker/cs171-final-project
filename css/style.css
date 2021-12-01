@@ -305,3 +305,52 @@ h3 {
 #introduction-to-psychology {
   text-align: center;
 }
+
+@media only screen and (max-width: 1210px) {
+  #triangle-navigation {
+    margin-left: 5%;
+  }
+  #triangle-navigation-labels-container {
+    margin-left: -130px;
+    margin-top: 70px;
+  }
+  .nav-tier {
+    padding-bottom:40px;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  #triangle-navigation {
+    margin-left: 0%;
+    height: 400px;
+  }
+  #triangle-navigation-labels-container {
+    margin-left: -200px;
+    margin-top: 70px;
+  }
+  .nav-tier {
+    padding-bottom: 40px;
+    margin-top: -30px;
+  }
+
+}
+
+
+@media only screen and (max-width: 770px) {
+  #triangle-navigation {
+    margin-left: 25%;
+  }
+  #triangle-navigation-labels-container {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 580px) {
+  #triangle-navigation {
+    margin-left: 5%;
+  }
+}
+
+
+
