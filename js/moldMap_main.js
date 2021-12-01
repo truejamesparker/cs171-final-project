@@ -1,7 +1,7 @@
 // Variable for the visualization instance
 let moldMap;
 
-d3.csv("/data/mold_reports.csv").then(csv=> {
+d3.csv("data/mold_reports.csv").then(csv=> {
 
     gettingStarted(csv);
 
@@ -9,7 +9,7 @@ d3.csv("/data/mold_reports.csv").then(csv=> {
 
 function gettingStarted(data) {
 
-    d3.json("/data/Borough-Boundaries.geojson"). then(jsonData=>{
+    d3.json("data/Borough-Boundaries.geojson"). then(jsonData=>{
         let geoJSONdata = jsonData;
         moldMap = new MoldMap("mold-map", data, [40.7128, -74.0060], geoJSONdata);
 
