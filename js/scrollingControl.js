@@ -41,11 +41,5 @@ $('#polygon-9').click(function() {
     return false;
 });
 
-$('#polygon-10').click(function() {
-    $(window).scrollTo($("#section-7"), 500, {});
-    return false;
-});
-
-
 
 
