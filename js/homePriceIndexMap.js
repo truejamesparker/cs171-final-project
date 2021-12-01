@@ -17,7 +17,6 @@ class HomePriceIndexMap {
 		this.initVis();
 	}
 
-
 	/*
 	 *  Initialize map
 	 */
@@ -28,9 +27,9 @@ class HomePriceIndexMap {
 
 		vis.map = L.map(vis.parentElement).setView([40.0902, -95.7129], 3.5);
 
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(vis.map);
+		L.tileLayer( 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+			subdomains: ['a','b','c']
+		}).addTo(vis.map );
 
 		vis.states = L.layerGroup().addTo(vis.map);
 
