@@ -108,7 +108,7 @@ class MoldMap {
         info.addTo(vis.map);
 
         function styleLines(feature) {
-            if (feature.properties.total_count > 190) {
+            if (feature.properties.total_count > 2600) {
                 return {
                     fillColor: "#DCAAE3",
                     weight: 1,
@@ -117,7 +117,7 @@ class MoldMap {
                     dashArray: '3',
                     fillOpacity: 0.7
                 };
-            } else if (feature.properties.total_count > 170) {
+            } else if (feature.properties.total_count > 2500) {
                 return {
                     fillColor: "#DFC3FD",
                     weight: 1,
@@ -126,7 +126,7 @@ class MoldMap {
                     dashArray: '3',
                     fillOpacity: 0.7
                 };
-            } else if (feature.properties.total_count > 70) {
+            } else if (feature.properties.total_count > 1200) {
                 return {
                     fillColor: "#D9D5FF",
                     weight: 1,
@@ -135,7 +135,7 @@ class MoldMap {
                     dashArray: '3',
                     fillOpacity: 0.7
                 };
-            } else if (feature.properties.total_count > 60) {
+            } else if (feature.properties.total_count > 500) {
                 return {
                     fillColor: "#DEE0FE",
                     weight: 1,
@@ -144,7 +144,7 @@ class MoldMap {
                     dashArray: '3',
                     fillOpacity: 0.7
                 };
-            } else if (feature.properties.total_count > 1) {
+            } else if (feature.properties.total_count > 50) {
                 return {
                     fillColor: "#E7EEFE",
                     weight: 1,
@@ -172,8 +172,12 @@ class MoldMap {
 
         let popupContent =  "<strong>Inspection Date </strong>";
             popupContent += d.InspectionDate;
+            popupContent += "<br/><strong>Street Name: </strong>"
+            popupContent += toTitleCase(d.StreetName);
             popupContent += "<br/><strong>Building ID: </strong>"
             popupContent += d.BuildingID;
+            popupContent += "<br/><strong>Story: </strong>"
+            popupContent += d.Story;
             popupContent += "<br/><strong>Borough: </strong>"
             popupContent += d.Borough;
             popupContent += "<br/><strong>Current Status: </strong>"
