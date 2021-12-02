@@ -18,7 +18,8 @@ let promises = [
     d3.csv('data/american_dream_data.csv'),
     d3.json('data/home_phys_data.json'),
     d3.csv('data/famous_homes.csv'),
-    d3.json('data/states.json')
+    d3.json('data/states.json'),
+    d3.csv('data/lotsizes.csv')
 ];
 
 // AWAIT
@@ -37,6 +38,7 @@ function initVisuals(datasets) {
     let physData = datasets[2];
     let famousData = datasets[3];
     let stateData = datasets[4];
+    let lotData = datasets[5];
 
     // INITIALIZE VISUALIZATIONS
 
@@ -44,7 +46,7 @@ function initVisuals(datasets) {
     dreamVis = new AmericanDreamVis("american-dream-vis", dreamData)
     physVis = new PhysVis("physical", physData);
     famousVis = new FamousVis("famous", famousData);
-    homeMapVis = new HomeMapVis("home-map", stateData);
+    homeMapVis = new HomeMapVis("home-map", stateData, lotData);
 
     // INIT EVENT HANDLERS
 

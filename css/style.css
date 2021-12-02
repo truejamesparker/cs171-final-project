@@ -179,7 +179,7 @@ h3 {
   height: 500px;*/
 }
 
-#physButtonGroup .btn-secondary {
+#physButtonGroup .btn-secondary, #lotButtonGroup .btn-secondary {
   background-color: #DFAAFB;
   border-color: white;
 }

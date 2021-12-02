@@ -10,9 +10,10 @@ class HomeMapVis {
 	/*
 	 *  Constructor method
 	 */
-	constructor(parentElement, data) {
+	constructor(parentElement, stateData, lotData) {
 		this.parentElement = parentElement;
-		this.data = data;
+		this.stateData = stateData;
+		this.lotData = lotData;
 		this.displayData = null;
 
 		this.initVis();
@@ -43,113 +44,50 @@ class HomeMapVis {
 			.attr('id', 'interTooltip')
 			.attr('class', 'tooltip')
 
-		vis.wrangleData();
-	}
-
-
-	/*
-	 *  Data wrangling
-	 */
-	wrangleData () {
-		let vis = this;
-
-		// TODO
-
-		this.displayData = this.data;
-
-		// Update the visualization
-		vis.updateVis();
-	}
-
-	updateVis() {
-		let vis = this;
-
-		const data = [
-			{ x: 3.4, y: 4.2 },
-			{ x: -0.1, y: 4.2 },
-			{ x: 3.8, y: 2.8 },
-			{ x: 3.6, y: 4.3 },
-			{ x: -0.1, y: 3.7 },
-			{ x: 4.7, y: 2.5 },
-			{ x: 0.8, y: 3.6 },
-			{ x: 4.7, y: 3.7 },
-			{ x: -0.4, y: 4.2 },
-			{ x: 0.1, y: 2.2 },
-			{ x: 0.5, y: 3 },
-			{ x: 4.3, y: 4.5 },
-			{ x: 3.4, y: 2.7 },
-			{ x: 4.4, y: 3.6 },
-			{ x: 3.3, y: 0.6 },
-			{ x: 3, y: 3.4 },
-			{ x: 4.7, y: 0 },
-			{ x: -0.7, y: 2.7 },
-			{ x: 2.6, y: 2 },
-			{ x: 0, y: -1 },
-			{ x: 3.4, y: 4.5 },
-			{ x: 3.9, y: 4.6 },
-			{ x: 0.7, y: 3.9 },
-			{ x: 3, y: 0.2 }
-		];
-
-		// let lat = d3.extent(vis.displayData.map(d => d.latitude))
-		// let long = d3.extent(vis.displayData.map(d => d.longitude))
+		// lat/lon bounds of continental US
 		let long = [-130, -60]
 		let lat = [26, 51]
 
 		// Add X axis
-		const x = d3.scaleLinear().domain(long).range([vis.margin.left, vis.width]);
-		x.clamp(true);
+		vis.x = d3.scaleLinear().domain(long).range([vis.margin.left, vis.width]);
+		vis.x.clamp(true); // Keep Hawaii and Alaska close
+
 		// Add Y axis
-		const y = d3.scaleLinear().domain(lat).range([vis.height, vis.margin.top]);
-		y.clamp(true);
+		vis.y = d3.scaleLinear().domain(lat).range([vis.height, vis.margin.top]);
+		vis.y.clamp(true); // Keep Hawaii and Alaska close
 
-		// compute the density data
-		const densityData = d3
-			.contourDensity()
-			.x(function (d) {
-				return x(d.longitude);
-			}) // x and y = column name in .csv input data
-			.y(function (d) {
-				return y(d.latitude);
-			})
-			.weight(() => Math.random() * (300 - 100) + 10)
-			.size([vis.width, vis.height])
-			.bandwidth(15)(
-				// smaller = more precision in lines = more lines
-				Object.values(vis.displayData)
-			);
+		vis.dataType = "yard"
 
-		const thresholds = densityData.map((r) => r.value);
-		// let extents = d3.extent(thresholds);
-		let extents = [0.2, 0.03, 0.06];
-		extents.push(d3.median(thresholds));
-		const color = d3
-			.scaleLinear()
-			.domain(extents.sort())
-			.range(["#DEE0FE", "white", "#DCAAE3"])
-			// .interpolate(d => {return interpolateRgb("#4f74b7", "red")})
-		// .interpolate(d3.interpolateHcl)
+		let btn = d3.select("#lotButtonGroup")
+		btn.on("click", (event) => {
+			let e = document.querySelector("#lotButtonGroup > .btn:focus")
+			vis.dataType = e.id
+			console.log(vis.dataType)
+			vis.wrangleData()
+		})
 
-		// Add the contour: several "path"
-		vis.svg
-			.selectAll("path")
-			.data(densityData)
-			.enter()
-			.append("path")
-			.attr("d", d3.geoPath())
-			.attr("fill", (d) => color(d.value))
-			.attr("stroke", "#e3e3e3")
-			// .attr("stroke-linejoin", "round")
-			.attr("stroke-opacity", 0.15);
+		let tempData = {}
 
-		vis.svg
+		this.stateData.forEach(d => tempData[d.state] = d)
+		this.lotData.forEach(d => {
+			tempData[d.state].lot = +d.lot
+			tempData[d.state].home = +d.home
+			tempData[d.state].yard = +d.yard
+		})
+
+		vis.displayData = Object.keys(tempData).map(function(k){return tempData[k]});
+
+		vis.contours = vis.svg.append("g")
+
+		vis.states = vis.svg.append("g")
+		vis.states
 			.selectAll(".map-point")
 			.data(vis.displayData)
 			.enter()
 			.append("circle")
 			.attr("class", "map-point")
-			.attr("cx", d => x(d.longitude))
-			.attr("cy", d => y(d.latitude))
+			.attr("cx", d => vis.x(d.longitude))
+			.attr("cy", d => vis.y(d.latitude))
 			.attr("r", 3)
 			.on('mouseover', function(event, d) {
 				d3.select(this)
@@ -161,6 +99,9 @@ class HomeMapVis {
                          <div>
                          	<div></div>
                              <p><span class="tooltip-emphasis">State:</span> ${d.state}</p>
+                             <p><span class="tooltip-emphasis">Yard:</span> ${(d.yard).toLocaleString()} sqft</p>
+                             <p><span class="tooltip-emphasis">Home:</span> ${(d.home).toLocaleString()} sqft</p>
+                             <p><span class="tooltip-emphasis">Lot:</span> ${(d.lot).toLocaleString()} sqft</p>
                          </div>`);
 			})
 			.on('mouseout', function (event, d) {
@@ -172,6 +113,88 @@ class HomeMapVis {
 					.html(``);
 
 			})
+
+		vis.wrangleData();
+	}
+
+
+	/*
+	 *  Data wrangling
+	 */
+	wrangleData () {
+		let vis = this;
+
+		// Update the visualization
+		vis.updateVis();
+	}
+
+	updateVis() {
+		let vis = this;
+
+		let vals = vis.displayData.map(d => d[vis.dataType])
+		let dev = d3.deviation(vals)
+		let avg = d3.mean(vals)
+		let med = d3.median(vals);
+
+
+		// compute the density data
+		const densityData = d3
+			.contourDensity()
+			.x(function (d) {
+				return vis.x(d.longitude);
+			}) // x and y = column name in .csv input data
+			.y(function (d) {
+				return vis.y(d.latitude);
+			})
+			.weight(d => {
+				switch (vis.dataType) {
+					case "yard":
+						return (vis.height/5) * (d.yard/med);
+					case "home":
+						return (vis.height/5) * (d.home/med);
+					case "lot":
+						return (vis.height/5) * (d.lot/med);
+				}
+			})
+			// .cellSize(4)
+			.size([vis.width, vis.height])
+			.bandwidth(12)(
+				// smaller = more precision in lines = more lines
+				Object.values(vis.displayData)
+			);
+
+		const thresholds = densityData.map((r) => r.value);
+		let md = d3.median(thresholds)
+		let mean = d3.mean(thresholds)
+		let d = d3.deviation(thresholds)
+		let extents = [md - d, md, md + d];
+		// extents.push(d3.median(thresholds));
+		console.log(extents)
+
+		const color = d3
+			.scaleLinear()
+			.domain(extents.sort())
+			.range(["#DEE0FE", "white", "#DCAAE3"])
+
+		// Add the contour: several "path"
+		vis.paths = vis.contours.selectAll(".cont").data(densityData)
+
+		vis.paths
+			.enter()
+			.append("path")
+			.attr("class", "cont")
+			.attr("stroke", "#e3e3e3")
+			.attr("stroke-opacity", 0.15)
+
+
+		vis.paths
+			.merge(vis.paths)
+			.attr("d", d3.geoPath())
+			.attr("fill", (d) => color(d.value))
+
+		vis.paths.exit()
+			.remove()
+
 	}
 }
 

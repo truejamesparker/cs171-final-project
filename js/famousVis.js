@@ -44,7 +44,7 @@ class FamousVis {
 			d.sqft = +d.sqft
 			d.rank = +d.rank
 		})
-		
+
 		vis.x = d3.scaleTime()
 			.domain(d3.extent(vis.data, d => {return d.completed}))
 			.range([0, vis.width])
