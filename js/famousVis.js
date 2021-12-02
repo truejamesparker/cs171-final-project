@@ -44,9 +44,7 @@ class FamousVis {
 			d.sqft = +d.sqft
 			d.rank = +d.rank
 		})
-
-		console.log(vis.data)
-
+		
 		vis.x = d3.scaleTime()
 			.domain(d3.extent(vis.data, d => {return d.completed}))
 			.range([0, vis.width])
@@ -76,7 +74,6 @@ class FamousVis {
 
 		// TODO
 		vis.displayData = vis.data
-		console.log("focus here", vis.data)
 
 		// Update the visualization
 		vis.updateVis();

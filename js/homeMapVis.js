@@ -119,13 +119,10 @@ class HomeMapVis {
 				Object.values(vis.displayData)
 			);
 
-		console.log(densityData);
-
 		const thresholds = densityData.map((r) => r.value);
 		// let extents = d3.extent(thresholds);
 		let extents = [0.2, 0.03, 0.06];
 		extents.push(d3.median(thresholds));
-		console.log(extents);
 		const color = d3
 			.scaleLinear()
 			.domain(extents.sort())

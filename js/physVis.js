@@ -80,7 +80,7 @@ class PhysVis {
 			.attr("font-size", "small")
 			.text("Year")
 
-		vis.svg.append("text")
+		vis.ytext = vis.svg.append("text")
 			.attr("class", "x label")
 			.attr("text-anchor", "middle")
 			.attr("transform", () => `translate(0,${vis.height/2}) rotate(-90)`)
@@ -233,6 +233,7 @@ class PhysVis {
 
 		vis.totalData = []
 		if (vis.dataType != "sqft") {
+			vis.ytext.text("# of houses (in thousands)")
 			vis.totalData = vis.data.map(d => {
 				let sum = 0
 				vis.fields.forEach(k => {
@@ -242,6 +243,8 @@ class PhysVis {
 				})
 				return {year: d.year, value: sum}
 			})
+		} else {
+			vis.ytext.text("Square feet")
 		}
 
 		let y = d3.scaleLinear()
