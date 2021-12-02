@@ -312,10 +312,6 @@ h3 {
   margin-top: 100px;
 }
 
-#introduction-to-psychology {
-  text-align: center;
-}
-
 @media only screen and (max-width: 1210px) {
   #triangle-navigation {
     margin-left: 5%;
@@ -382,5 +378,11 @@ h3 {
   padding: 20px;
 }
 
+#statePieGraphContainer {
+  margin-left:40px;
+}
 
-
+.statePieGraphRectangle {
+  width:15px;
+  height:15px;
+}

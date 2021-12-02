@@ -142,10 +142,14 @@ class StateMovementBarChart {
 			});
 
 		vis.svg.selectAll("rect").on('mouseover', function(event, d) {
+
+
 			d3.select(this)
 				.attr('stroke-width', '3px')
 				.attr('stroke', 'lightgrey')
 				.attr('opacity', 0.7)
+
+
 
 			vis.tooltip
 				.style("opacity", 1)
@@ -158,8 +162,22 @@ class StateMovementBarChart {
                              <p><span class="tooltip-emphasis">Inbound Shipments:</span> ${d.Inbound_Shipments}</p>                                              
                              <p><span class="tooltip-emphasis">Outbound Shipments:</span> ${d.Outbound_Shipments}</p> 
                              <p><span class="tooltip-emphasis">Inbound Percent:</span> ${d.Inbound_Percent}%</p>                                              
-                             <p><span class="tooltip-emphasis">Outbound Percent:</span> ${d.Outbound_Percent}%</p>                                                                                      
+                             <p><span class="tooltip-emphasis">Outbound Percent:</span> ${d.Outbound_Percent}%</p>  
+                             <div id="pieDivRight"></div>   
+                             <div class="row" id="statePieGraphContainer">
+                             	<div class="col-md-2">
+                             		<div class="statePieGraphRectangle" style="background:#E0A9FB"></div>
+								 	<div class="statePieGraphRectangle" style="background:#E9E4FE"></div>   
+								</div>
+								<div class="col-md-10">
+									<span>inbound<br></span>    
+									<span>outbound</span>
+								</div>
+							</div>                         
                          </div>`);
+
+			pieChart = new StateMovement_pieChart("pieDivRight", vis.data, d.StateName);
+
 		})
 			.on('mouseout', function (event, d) {
 				d3.select(this)
