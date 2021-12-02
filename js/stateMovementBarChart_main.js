@@ -1,6 +1,9 @@
+let pieChart;
+
 d3.csv("data/moving-data.csv").then(csv => {
     let data = csv;
     inboundGraph = new StateMovementBarChart("#inboundGraphContainer", data, "inbound");
+    // pieChart = new StateMovement_pieChart("pieContainer", data, "Oregon");
 })
 
 
