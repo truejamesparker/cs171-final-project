@@ -249,7 +249,7 @@ h3 {
   transform: scale(0.92);
 }
 
-.shipmentsTooltip, .housingShowTooltip, .dreamTooltip, #famousTooltip {
+.tooltip {
   position: absolute;
   text-align: left;
   max-width: 40em;
@@ -261,11 +261,11 @@ h3 {
   /*border-top: 8px solid #E8F0FC;*/
 }
 
-.dreamTooltip {
+#dreamTooltip, #tvTooltip {
   max-width: 250px;
 }
 
-.shipment-tooltip-emphasis, .famoushomes-tooltip-emphasis {
+.tooltip-emphasis {
   font-weight: 600;
 }
 
@@ -278,6 +278,12 @@ h3 {
   font-size: 0.5em;
 }
 
+.legendTitle {
+  font-family: Montserrat;
+  font-size: 0.6em;
+  font-weight: bold;
+}
+
 #triangle-navigation {
   height: 600px;
   margin-bottom: -80px;
@@ -285,9 +291,14 @@ h3 {
 
 }
 
+.map-point {
+  fill: transparent;
+  stroke: grey;
+  stroke-width: 1.5px;
+}
+
 .polygon {
   cursor: pointer;
-
 }
 
 .nav-tier {
@@ -296,7 +307,6 @@ h3 {
   padding-bottom: 57px;
 
 }
-
 
 #triangle-navigation-labels-container {
   margin-top: 100px;

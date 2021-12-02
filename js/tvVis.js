@@ -30,7 +30,7 @@ class TvVis {
 		vis.margin = { top: 20, right: 20, bottom: 0, left: 20 };
 
 		vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-		vis.height = 500 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
+		vis.height = 300 - vis.margin.top - vis.margin.bottom; //document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
 
 		// SVG drawing area
 		vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -69,10 +69,12 @@ class TvVis {
 
 		vis.radiusScale = d3.scaleSqrt()
 			.domain(d3.extent(vis.data, d => {return d.episodes}))
-			.range([0, 60]);
+			.range([5, 5]);
+
+		vis.colorScale = d3.scaleLinear()
+			.range(["#cfe0fe", "#dfabfb"])
 
 		vis.selectedTime = null;
-
 
 		vis.bmargin = { top: 0, bottom: 20 }
 		vis.bheight = 100 - vis.margin.top - vis.bmargin.bottom
@@ -100,11 +102,21 @@ class TvVis {
 
 		 */
 
+		vis.legend = d3.legendColor()
+			.labelFormat(".0f")
+			.scale(vis.colorScale)
+
+		vis.legend.title("# TV episodes")
+
+
+
+		vis.legendGroup = vis.svg.append("g")
+			.attr("transform", `translate(${vis.margin.left},${0})`)
+
 		vis.timelineSvg
 			.append("g")
 			.attr("class", "x brush")
 			.call(vis.brush)
-
 
 		vis.xAxis = d3.axisBottom()
 			.scale(vis.timeScale)
@@ -116,13 +128,15 @@ class TvVis {
 			.call(vis.xAxis)
 
 		vis.simulation = d3.forceSimulation()
-			.force('charge', d3.forceManyBody().strength(0.25))
-			.force('center', d3.forceCenter(vis.width / 2, vis.height / 2))
-			.force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
+			// .force('charge', d3.forceManyBody().strength(0.25))
+			// .force('center', d3.forceCenter(vis.width / 2, vis.height / 2))
+			.force('y', d3.forceY().y(vis.height).strength(5))
+			.force('collision', d3.forceCollide(5))
+			// .force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
 
 		vis.tooltip = d3.select("body").append('div')
-			.attr('class', "housingShowTooltip")
-			.attr('id', 'showTooltip')
+			.attr('class', "tooltip")
+			.attr('id', 'tvTooltip')
 
 		vis.wrangleData();
 	}
@@ -149,8 +163,6 @@ class TvVis {
 	updateVis() {
 		let vis = this;
 
-		// TODO
-
 		// vis.radiusScale.domain([0, d3.max(vis.displayData, d => {return d.episodes})])
 
         let shows = vis.svg.selectAll(".show").data(vis.displayData, d => d.id);
@@ -158,11 +170,15 @@ class TvVis {
 		shows.exit()
 			.remove()
 
+		vis.colorScale.domain([0,100])
+		vis.colorScale.clamp(true)
+		vis.legendGroup.call(vis.legend)
+
 		let newCircles = shows
             .enter()
             .append("circle")
             .attr("class", "show")
-            .attr("fill", () => choose(vis.colors))
+            .attr("fill", d => vis.colorScale(d.episodes))
 			.attr("r", d => vis.radiusScale(d.episodes))
             .attr("cx", vis.width/2)
             .attr("cy", vis.height/2)
@@ -190,11 +206,14 @@ class TvVis {
             .on("tick", tick)
 
 		vis.simulation
-			.force('charge', d3.forceManyBody().strength(0.25))
-			.force('center', d3.forceCenter(vis.width / 2, vis.height / 2))
-			.force("x", d3.forceX(vis.width/2).strength(0.0025))
-			.force("y", d3.forceY(vis.height/2).strength(0.0025))
-			.force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
+			// .force('charge', d3.forceManyBody().strength(0.25))
+			// .force('center', d3.forceCenter(vis.width / 2, vis.height / 2))
+			// .force("x", d3.forceX(vis.width/2).strength(0.0025))
+			.force("x", d3.forceX().x(d => vis.timeScale(d.year)).strength(1))
+			// .force("y", d3.forceY(vis.height/2).strength(0.0025))
+			.force("y", d3.forceY().y(vis.height/2).strength(0.025))
+			.force('collision', d3.forceCollide(5).iterations(10).strength(2))
+			// .force('collision', d3.forceCollide().radius(d => vis.radiusScale(d.episodes)))
 
 		vis.svg.selectAll("circle").on('mouseover', function(event, d) {
 			d3.select(this)
@@ -208,10 +227,10 @@ class TvVis {
 				.style("top", event.pageY + "px")
 				.html(`
                          <div>
-                             <p><span class="shipment-tooltip-emphasis">Show Name:</span> ${d.title}</p>
-                              <p><span class="shipment-tooltip-emphasis">Episode Count:</span> ${d.episodes}</p>
-                              <p><span class="shipment-tooltip-emphasis">Genre(s):</span> ${d.genres}</p>
-                              <p><span class="shipment-tooltip-emphasis">Rating:</span> ${d.rating}</p>
+                             <p><span class="tooltip-emphasis">Show Name:</span> ${d.title}</p>
+                              <p><span class="tooltip-emphasis">Episode Count:</span> ${d.episodes}</p>
+                              <p><span class="tooltip-emphasis">Genre(s):</span> ${d.genres}</p>
+                              <p><span class="tooltip-emphasis">Rating:</span> ${d.rating}</p>
 						  	  <div id="tv-stats" style="text-align: center">
 								<img src=${d.photo ? d.photo : "https://upload.wikimedia.org/wikipedia/commons/e/ea/No_image_preview.png"} style="max-width: 100%; max-height: 10em">			
 							  </div>                                                          
@@ -233,7 +252,7 @@ class TvVis {
 
 
 	vis.simulation.alpha(1).alphaTarget(0).restart();
-
+	// 	vis.simulation.alpha(1).alphaDecay(0.001).restart();
 	}
 }
 

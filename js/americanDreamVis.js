@@ -19,7 +19,7 @@ class AmericanDreamVis {
         let vis = this;
 
         vis.tooltip = d3.select("body").append('div')
-            .attr('class', "dreamTooltip")
+            .attr('class', "tooltip")
             .attr('id', 'dreamTooltip')
 
         // TODO
@@ -130,7 +130,7 @@ class AmericanDreamVis {
                     .style("top", event.pageY + "px")
                     .html(`
                          <div>
-                             <p>In<span class="shipment-tooltip-emphasis"> ${d.Year}</span>, a reported<span class="shipment-tooltip-emphasis"> ${d.Percent}%</span> of surveyed Americans associated home ownership with the American dream.</p>
+                             <p>In<span class="tooltip-emphasis"> ${d.Year}</span>, a reported<span class="tooltip-emphasis"> ${d.Percent}%</span> of surveyed Americans associated home ownership with the American dream.</p>
                          </div>`);
             })
             .on('mouseout', function(event, d){

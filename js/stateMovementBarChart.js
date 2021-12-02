@@ -43,7 +43,7 @@ class StateMovementBarChart {
 			.style("text-anchor", "end");
 
 		vis.tooltip = d3.select("body").append('div')
-			.attr('class', "shipmentsTooltip")
+			.attr('class', "tooltip")
 			.attr('id', 'barTooltip')
 
 		vis.wrangleData();
@@ -153,12 +153,12 @@ class StateMovementBarChart {
 				.style("top", event.pageY + "px")
 				.html(`
                          <div>
-                             <p class="first-text"><span class="shipment-tooltip-emphasis">State:</span> ${d.StateName}</p>
-                             <p><span class="shipment-tooltip-emphasis">Total Shipments:</span> ${d.Total_Shipments}</p>                 
-                             <p><span class="shipment-tooltip-emphasis">Inbound Shipments:</span> ${d.Inbound_Shipments}</p>                                              
-                             <p><span class="shipment-tooltip-emphasis">Outbound Shipments:</span> ${d.Outbound_Shipments}</p> 
-                             <p><span class="shipment-tooltip-emphasis">Inbound Percent:</span> ${d.Inbound_Percent}%</p>                                              
-                             <p><span class="shipment-tooltip-emphasis">Outbound Percent:</span> ${d.Outbound_Percent}%</p>                                                                                      
+                             <p class="first-text"><span class="tooltip-emphasis">State:</span> ${d.StateName}</p>
+                             <p><span class="tooltip-emphasis">Total Shipments:</span> ${d.Total_Shipments}</p>                 
+                             <p><span class="tooltip-emphasis">Inbound Shipments:</span> ${d.Inbound_Shipments}</p>                                              
+                             <p><span class="tooltip-emphasis">Outbound Shipments:</span> ${d.Outbound_Shipments}</p> 
+                             <p><span class="tooltip-emphasis">Inbound Percent:</span> ${d.Inbound_Percent}%</p>                                              
+                             <p><span class="tooltip-emphasis">Outbound Percent:</span> ${d.Outbound_Percent}%</p>                                                                                      
                          </div>`);
 		})
 			.on('mouseout', function (event, d) {

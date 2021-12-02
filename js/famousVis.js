@@ -135,12 +135,12 @@ class FamousVis {
 					.html(`
          <div>
              <!--<a href="https://en.wikipedia.org/wiki/$//{d.name.split(' ').join('_')}">$//{d.name}</a> -->   
-             <p><span class="famoushomes-tooltip-emphasis">Name:</span> ${d.name}</p>                
-             <p><span class="famoushomes-tooltip-emphasis">Square Feet:</span> ${d.sqft}</p>   
-             <p><span class="famoushomes-tooltip-emphasis">Architect:</span> ${d.architect}</p>   
-             <p><span class="famoushomes-tooltip-emphasis">Built For:</span> ${d.builtfor}</p>   
-		     <p><span class="famoushomes-tooltip-emphasis">Current Owner:</span> ${d.owner}</p>     
-		     <p><span class="famoushomes-tooltip-emphasis">Rank:</span> ${d.rank}</p>  
+             <p><span class="tooltip-emphasis">Name:</span> ${d.name}</p>                
+             <p><span class="tooltip-emphasis">Square Feet:</span> ${d.sqft}</p>   
+             <p><span class="tooltip-emphasis">Architect:</span> ${d.architect}</p>   
+             <p><span class="tooltip-emphasis">Built For:</span> ${d.builtfor}</p>   
+		     <p><span class="tooltip-emphasis">Current Owner:</span> ${d.owner}</p>     
+		     <p><span class="tooltip-emphasis">Rank:</span> ${d.rank}</p>  
 			 <img src="${d.image}">
 
                       

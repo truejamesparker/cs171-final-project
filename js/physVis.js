@@ -157,9 +157,7 @@ class PhysVis {
 			vis.paths[i] = vis.svg
 			.append("path")
 			.attr("class", "gPath")
-			// .attr("fill", "none")
 			.attr("stroke", vis.colors[i])
-			// .attr("stroke-width", 1.5)
 		)
 
 		vis.wrangleData();
@@ -230,6 +228,24 @@ class PhysVis {
 
 		vis.colorScale.domain(vis.fields.map(field => vis.field2label[field]))
 		vis.legendGroup.call(vis.legend)
+
+		// vis.totalData = []
+		// vis.fields.forEach((l, i) => {
+		// 	let data = vis.displayData.map(d => {
+		// 		return {year: d.year, value: d[vis.dataType][l]}
+		// 	}).filter(d => d.value != null)
+		//
+		// vis.timelineSvg.append("g")
+		// 	.datum(vis.totalData)
+		// 	.append("path")
+		// 	.attr("d", d3.line()
+		// 		.x(function (d) {
+		// 			return vis.xScale(d.year)
+		// 		})
+		// 		.y(function (d) {
+		// 			return vis.yScale(d.value)
+		// 		})
+		// 	)
 
 		vis.fields.forEach((l, i) => {
 			let data = vis.displayData.map(d => {

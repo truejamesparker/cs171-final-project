@@ -17,7 +17,8 @@ let promises = [
     d3.json('data/tv_data.json'),
     d3.csv('data/american_dream_data.csv'),
     d3.json('data/home_phys_data_nested.json'),
-    d3.csv('data/famous_homes.csv')
+    d3.csv('data/famous_homes.csv'),
+    d3.json('data/states.json')
 ];
 
 // AWAIT
@@ -28,13 +29,14 @@ Promise.all(promises)
 
 
 function initVisuals(datasets) {
-    
+
     console.log(datasets);
 
     let tvData = datasets[0];
     let dreamData = datasets[1];
     let physData = datasets[2];
     let famousData = datasets[3];
+    let stateData = datasets[4];
 
     // INITIALIZE VISUALIZATIONS
 
@@ -42,7 +44,7 @@ function initVisuals(datasets) {
     dreamVis = new AmericanDreamVis("american-dream-vis", dreamData)
     physVis = new PhysVis("physical", physData);
     famousVis = new FamousVis("famous", famousData);
-    // dataVis2 = new TemplateViz("my-parent-element2", dataset2);
+    homeMapVis = new HomeMapVis("home-map", stateData);
 
     // INIT EVENT HANDLERS
 
@@ -52,5 +54,3 @@ function initVisuals(datasets) {
     //     dataVis0.onSelectionChange(rangeStart, rangeEnd);
     // });
 }
-
-
