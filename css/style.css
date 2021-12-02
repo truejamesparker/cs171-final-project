@@ -357,14 +357,14 @@ h3 {
   height: 400px;
 }
 
-.moldMapBoroughName {
+.moldMapBoroughName, .HPIMapValueContainer {
   font-size:11pt;
   color: #191818;
   padding-bottom:120px;
 }
 
 
-.moldMapBoroughInfo {
+.moldMapBoroughInfo, .HPIMapStateInfo {
   font-family :"Montserrat";
   background: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

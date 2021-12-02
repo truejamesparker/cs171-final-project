@@ -58,7 +58,7 @@ class MoldMap {
 
             vis.boroughs.resetStyle(e.target);
 
-            info.revealHover(layer.feature.properties);
+            moldMapBox.revealHover(layer.feature.properties);
 
         }
 
@@ -74,7 +74,7 @@ class MoldMap {
                 layer.bringToFront();
             }
 
-            info.revealHover(layer.feature.properties);
+            moldMapBox.revealHover(layer.feature.properties);
         }
 
         function onEachFeature(feature, layer) {
@@ -91,21 +91,21 @@ class MoldMap {
             onEachFeature: onEachFeature
         }).addTo(vis.map);
 
-        let info = L.control();
+        let moldMapBox = L.control();
 
-        info.onAdd = function (map) {
+        moldMapBox.onAdd = function (map) {
             this._div = L.DomUtil.create('div', 'moldMapBoroughInfo'); // create a div with a class "info"
             this.revealHover();
             return this._div;
         };
 
-        info.revealHover = function (borough) {
+        moldMapBox.revealHover = function (borough) {
             this._div.innerHTML =  (borough ?
                 '<b><span class="moldMapBoroughName">' + " " + borough.boro_name + '</span></b><br /><div><span>' + ' Total Number of Violations:</span>' + ' ' + borough.total_count
                 : 'Hover over a borough</div>');
         };
 
-        info.addTo(vis.map);
+        moldMapBox.addTo(vis.map);
 
         function styleLines(feature) {
             if (feature.properties.total_count > 2600) {

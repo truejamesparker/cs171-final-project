@@ -28,5 +28,6 @@ d3.select("#variable-type").on("change", changeFilter);
 
 function changeFilter(){
     variable_value = d3.select("#variable-type").property("value");
+    d3.select(".HPIMapStateInfo").remove();
     homePriceMap.updateVis(variable_value)
 }

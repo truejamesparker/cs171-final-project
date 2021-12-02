@@ -82,10 +82,19 @@ class HomePriceIndexMap {
 				fillOpacity: 0.4
 			});
 
+			if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+				selected_state.bringToFront();
+			}
+
+			HPIMapBox.revealHover(selected_state.feature.properties);
+
 		}
 
 		function turnOffHighlight(state) {
 			vis.stateBoundaries.resetStyle(state.target);
+
+			HPIMapBox.revealHover(state.target.feature.properties);
+
 		}
 
 		function onEachFeature(feature, layer) {
@@ -117,6 +126,34 @@ class HomePriceIndexMap {
 			weight: 3,
 			fillOpacity: 0.95
 		}).addTo(vis.map);
+
+
+
+
+		let HPIMapBox = L.control();
+
+		HPIMapBox.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'HPIMapStateInfo'); // create a div with a class "info"
+			this.revealHover();
+			return this._div;
+		};
+
+		HPIMapBox.revealHover = function (state) {
+			if (variable_type == "HPI_change") {
+				this._div.innerHTML =  (state ?
+					'<b><span class="HPIMapValueContainer">' + " " + state.name + '</span></b><br /><div><span>' + ' HPI Change:</span>' + ' ' + state.HPI_change
+					: 'Hover over a state</div>');
+			} else {
+				this._div.innerHTML =  (state ?
+					'<b><span class="HPIMapValueContainer">' + " " + state.name + '</span></b><br /><div><span>' + ' HPI:</span>' + ' ' + state.HPI
+					: 'Hover over a state</div>');
+			}
+
+		};
+
+		HPIMapBox.addTo(vis.map);
+
+
 
 
 		function styleLines(d) {
