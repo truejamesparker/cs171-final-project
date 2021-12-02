@@ -63,7 +63,7 @@ class PhysVis {
 			.attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
 		vis.timelineSvgMargin = { top: 10, bottom: 30 }
-		vis.timelineSvgHeight = 80 - vis.margin.top - vis.timelineSvgMargin.bottom
+		vis.timelineSvgHeight = 120 - vis.margin.top - vis.timelineSvgMargin.bottom
 
 		vis.timelineSvg = d3.select("#" + vis.parentElement).append("svg")
 			.attr("width", vis.width + vis.margin.left + vis.margin.right)
@@ -160,6 +160,8 @@ class PhysVis {
 			.attr("stroke", vis.colors[i])
 		)
 
+		vis.trend = vis.timelineSvg.append("g").append("path")
+
 		vis.wrangleData();
 	}
 
@@ -207,7 +209,7 @@ class PhysVis {
 			let list = []
 			data.forEach(d => {
 				vis.fields.forEach(f => {
-					list.push(d[vis.dataType][f])
+					list.push(d[f])
 				})
 			})
 			let max = d3.max(list)
@@ -229,27 +231,39 @@ class PhysVis {
 		vis.colorScale.domain(vis.fields.map(field => vis.field2label[field]))
 		vis.legendGroup.call(vis.legend)
 
-		// vis.totalData = []
-		// vis.fields.forEach((l, i) => {
-		// 	let data = vis.displayData.map(d => {
-		// 		return {year: d.year, value: d[vis.dataType][l]}
-		// 	}).filter(d => d.value != null)
-		//
-		// vis.timelineSvg.append("g")
-		// 	.datum(vis.totalData)
-		// 	.append("path")
-		// 	.attr("d", d3.line()
-		// 		.x(function (d) {
-		// 			return vis.xScale(d.year)
-		// 		})
-		// 		.y(function (d) {
-		// 			return vis.yScale(d.value)
-		// 		})
-		// 	)
+		vis.totalData = []
+		if (vis.dataType != "sqft") {
+			vis.totalData = vis.data.map(d => {
+				let sum = 0
+				vis.fields.forEach(k => {
+					if (d[k] != null) {
+						sum += d[k]
+					}
+				})
+				return {year: d.year, value: sum}
+			})
+		}
+
+		let y = d3.scaleLinear()
+			.domain(d3.extent(vis.totalData, d => { return d.value }))
+			.range([vis.timelineSvgHeight, vis.timelineSvgMargin.top])
+
+		vis.trend
+			.datum(vis.totalData)
+			.attr("class", "gPath")
+			.attr("stroke", "grey")
+			.attr("d", d3.line()
+				.x(function (d) {
+					return vis.timeScale(d.year)
+				})
+				.y(function (d) {
+					return y(d.value)
+				})
+			)
 
 		vis.fields.forEach((l, i) => {
 			let data = vis.displayData.map(d => {
-				return {year: d.year, value: d[vis.dataType][l]}
+				return {year: d.year, value: d[l]}
 			}).filter(d => d.value != null)
 			vis.paths[i]
 				.datum(data)

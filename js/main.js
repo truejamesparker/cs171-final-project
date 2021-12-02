@@ -16,7 +16,7 @@ let promises = [
     // fetch(url).then(resp => resp.json()),
     d3.json('data/tv_data.json'),
     d3.csv('data/american_dream_data.csv'),
-    d3.json('data/home_phys_data_nested.json'),
+    d3.json('data/home_phys_data.json'),
     d3.csv('data/famous_homes.csv'),
     d3.json('data/states.json')
 ];
