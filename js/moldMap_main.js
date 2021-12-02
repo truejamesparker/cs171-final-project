@@ -1,12 +1,6 @@
 // Variable for the visualization instance
 let moldMap;
 
-d3.csv("cs171-final-project/data/new_mold.csv").then(csv=> {
-
-    gettingStarted(csv);
-
-});
-
 d3.csv("data/new_mold.csv").then(csv=> {
 
     gettingStarted(csv);
