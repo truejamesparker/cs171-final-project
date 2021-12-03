@@ -130,6 +130,9 @@ class HomeMapVis {
 	updateVis() {
 		let vis = this;
 
+		let vals = vis.displayData.map(d => d[vis.dataType])
+		console.log(d3.median(vals) / d3.deviation(vals))
+
 		// compute the density data
 		const densityData = d3
 			.contourDensity()
@@ -159,7 +162,7 @@ class HomeMapVis {
 		let med = d3.median(thresholds)
 		let mean = d3.mean(thresholds)
 		let dev = d3.deviation(thresholds)
-		let extents = [mean - dev, mean, mean + dev]
+		let extents = [mean - dev, med, mean + dev]
 		// let extents = d3.extent(thresholds)
 		// extents.push(med)
 		extents.sort((a, b) => a - b);
