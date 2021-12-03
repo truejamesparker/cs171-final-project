@@ -62,7 +62,6 @@ class HomeMapVis {
 		btn.on("click", (event) => {
 			let e = document.querySelector("#lotButtonGroup > .btn:focus")
 			vis.dataType = e.id
-			console.log(vis.dataType)
 			vis.wrangleData()
 		})
 
@@ -131,12 +130,6 @@ class HomeMapVis {
 	updateVis() {
 		let vis = this;
 
-		let vals = vis.displayData.map(d => d[vis.dataType])
-		let dev = d3.deviation(vals)
-		let avg = d3.mean(vals)
-		let med = d3.median(vals);
-
-
 		// compute the density data
 		const densityData = d3
 			.contourDensity()
@@ -149,32 +142,33 @@ class HomeMapVis {
 			.weight(d => {
 				switch (vis.dataType) {
 					case "yard":
-						return (vis.height/5) * (d.yard/med);
+						return d.yard;
 					case "home":
-						return (vis.height/5) * (d.home/med);
+						return d.home;
 					case "lot":
-						return (vis.height/5) * (d.lot/med);
+						return d.lot;
 				}
 			})
-			// .cellSize(4)
 			.size([vis.width, vis.height])
-			.bandwidth(12)(
+			.bandwidth(15)(
 				// smaller = more precision in lines = more lines
 				Object.values(vis.displayData)
 			);
 
-		const thresholds = densityData.map((r) => r.value);
-		let md = d3.median(thresholds)
+		const thresholds = densityData.map((r) => +r.value);
+		let med = d3.median(thresholds)
 		let mean = d3.mean(thresholds)
-		let d = d3.deviation(thresholds)
-		let extents = [md - d, md, md + d];
-		// extents.push(d3.median(thresholds));
+		let dev = d3.deviation(thresholds)
+		let extents = [mean - dev, mean, mean + dev]
+		// let extents = d3.extent(thresholds)
+		// extents.push(med)
+		extents.sort((a, b) => a - b);
 		console.log(extents)
 
 		const color = d3
 			.scaleLinear()
-			.domain(extents.sort())
-			.range(["#DEE0FE", "white", "#DCAAE3"])
+			.domain(extents)
+			.range(["#cfe0fd", "white", "#DCAAE3"])
 
 		// Add the contour: several "path"
 		vis.paths = vis.contours.selectAll(".cont").data(densityData)
@@ -185,7 +179,8 @@ class HomeMapVis {
 			.attr("class", "cont")
 			.attr("stroke", "#e3e3e3")
 			.attr("stroke-opacity", 0.15)
-
+			.attr("d", d3.geoPath())
+			.attr("fill", (d) => color(d.value))
 
 		vis.paths
 			.merge(vis.paths)
