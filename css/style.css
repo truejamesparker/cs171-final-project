@@ -386,3 +386,7 @@ h3 {
   width:15px;
   height:15px;
 }
+
+.btn:focus {
+  background-color: #c772f2 !important;
+}
