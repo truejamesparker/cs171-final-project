@@ -190,8 +190,13 @@ h3 {
   stroke-width: 3;
 }
 
-.home {
-  color: orange;
+.lot {
+  fill: #b1e3aa;
+}
+
+.state-label {
+  font-size: 0.5em;
+  text-anchor: middle;
 }
 
 .conclusion-text {
