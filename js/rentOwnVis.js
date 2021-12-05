@@ -109,8 +109,6 @@ class RentOwnVis {
             .attr('class', "tooltip")
             .attr('id', 'jobstooltip')
 
-
-
         vis.wrangleData();
     }
 
