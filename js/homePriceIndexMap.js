@@ -75,6 +75,10 @@ class HomePriceIndexMap {
 	updateVis(variable_type) {
 		let vis = this;
 
+		if (variable_type != "HPI_change") {
+			variable_type = "HPI";
+		}
+
 		function activateHighlight(state) {
 			let selected_state = state.target;
 
