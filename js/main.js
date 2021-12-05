@@ -51,7 +51,7 @@ function initVisuals(datasets) {
     physVis = new PhysVis("physical", physData);
     famousVis = new FamousVis("famous", famousData);
     homeMapVis = new HomeMapVis("home-map", stateData, lotData);
-    worshipVis = new WorshipVis("worship-vis", worshipData);
+
 
     // INIT EVENT HANDLERS
 
