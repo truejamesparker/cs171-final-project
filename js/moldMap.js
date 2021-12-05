@@ -34,6 +34,24 @@ class MoldMap {
 
         vis.moldReports = L.layerGroup().addTo(vis.map);
 
+        let moldColorInfo = L.control({position: 'bottomright'});
+
+        vis.moldColorDefinitions;
+
+        moldColorInfo.onAdd = function (map) {
+
+            vis.moldColorDefinitions = L.DomUtil.create('div', 'info mold-key');
+
+            vis.moldColorDefinitions.innerHTML += '<i style="background: #DCAAE3"></i>' + "> 1500" + '<br>'
+            vis.moldColorDefinitions.innerHTML += '<i style="background: #D9D5FF"></i>' + "> 1000" + '<br>'
+            vis.moldColorDefinitions.innerHTML += '<i style="background: #DEE0FE"></i>' + "> 500" + '<br>'
+            vis.moldColorDefinitions.innerHTML += '<i style="background: #E7EEFE"></i>' + "> 50" + '<br>'
+
+            return vis.moldColorDefinitions;
+        };
+
+        moldColorInfo.addTo(vis.map);
+
         vis.wrangleData();
     }
 
@@ -108,18 +126,9 @@ class MoldMap {
         moldMapBox.addTo(vis.map);
 
         function styleLines(feature) {
-            if (feature.properties.total_count > 2600) {
+            if (feature.properties.total_count > 2500) {
                 return {
                     fillColor: "#DCAAE3",
-                    weight: 1,
-                    opacity: 1,
-                    color: 'white',
-                    dashArray: '3',
-                    fillOpacity: 0.7
-                };
-            } else if (feature.properties.total_count > 2500) {
-                return {
-                    fillColor: "#DFC3FD",
                     weight: 1,
                     opacity: 1,
                     color: 'white',
