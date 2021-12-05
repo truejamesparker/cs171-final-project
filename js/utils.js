@@ -29,4 +29,11 @@ let dateFormatter = d3.timeFormat("%Y-%m-%d");
 let dateParser = d3.timeParse("%Y-%m-%d");
 let yearParser = d3.timeParse("%Y");
 
-
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}

@@ -147,9 +147,6 @@ class RentOwnVis {
             .attr("height", function(d) { return vis.height - vis.y(d.value); })
             .attr("fill", function(d) { return vis.color(d.key); });
 
-        console.log(vis.displayData)
-        console.log('seasons greetings')
-
         vis.svg.selectAll("rect").on('mouseover', function(event, d) {
 
 
@@ -157,7 +154,6 @@ class RentOwnVis {
                 .attr('stroke-width', '3px')
                 .attr('stroke', 'lightgrey')
                 .attr('opacity', 0.7)
-
 
             vis.tooltipstring = d.value * 100 + "%"
             if (vis.type === 'years') {
@@ -170,7 +166,7 @@ class RentOwnVis {
                 .html(`
                          <div>
                  
-                             <p>${d.key}: ${vis.tooltipstring}</p>                                                        
+                             <p><span class="tooltip-emphasis">${toTitleCase(d.key)}</span>: ${vis.tooltipstring}</p>                                                        
                            
  
                          </div>`);
@@ -179,7 +175,6 @@ class RentOwnVis {
                 d3.select(this)
                     .attr('stroke-width', '0px')
                     .attr("opacity", 1)
-                console.log(d)
                 vis.tooltip
                     .style("opacity", 0)
                     .style("left", 0)

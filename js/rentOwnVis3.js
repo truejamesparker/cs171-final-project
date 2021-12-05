@@ -15,7 +15,6 @@ class RentOwnVis {
         this.data = data;
         this.displayData = null;
         this.selected = 'years'
-        console.log(data)
         this.initVis();
     }
 

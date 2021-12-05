@@ -202,7 +202,7 @@
             <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">This choropleth map plots fluctuations in home price across different US states. To forecast the general movement in valuations, the FHFA's Home Price Index (HPI) and annual change in HPI (as a percent) are used. The index is calculated as a measure of home sales in a given tract level and is based on a complex formula expounded upon <a href="https://www.fhfa.gov/PolicyProgramsResearch/Research/Pages/HPI-Technical-Description.aspx" target="_blank">here</a>.<br><br>The greatest variability in home prices appears to be clustered along the Pacific Coast, with pockets of HPI also appearing in select states in New England and the Mountain West. Measures of percent change are highest in Idaho and Arizona.
         </div>
         <div class="col-md-6" class="visualization-container-right">
-            <p class="paragraph-body visualization-title"><span>Title:</span> Home Price Index (HPI) and Percent Change vs. State <br><br>
+            <p class="paragraph-body visualization-title"><span>Title:</span> Home Price Index (HPI) and Percent Change vs. State <br><br></p>
                 <select class="form-control" id="variable-type">
                     <option value="HPI">Home Price Index (HPI)</option>
                     <option value="HPI_change">Annual change in HPI as a percent</option>
@@ -251,24 +251,25 @@
                 <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
     </div>
+
     <div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
-        <div class="col-md-4" class="visualization-container-left">
-            <h1 class="visualization-label" data-aos="fade-up" data-aos-duration="900">Direction of moves</h1>
-            <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">This pair of bar graphs uses data from the moving company, United Van Lines, and its annual report. UVL tracks the relocation tendencies of its customers, including what percentage of shipments are inbound (entering the state) or outbound (leaving it). A full breakdown of the data collection process can be found <a href="https://www.unitedvanlines.com/newsroom/movers-study-2020" target="_blank">here</a>.<br><br> The general direction of movement appears to trend towards the South and West, with Idaho and South Carolina being among the states with the highest inbound percentage. Conversely, many states with the greatest amount of outbound flow are clustered in the North East.
+        <div class="col-md-6" class="visualization-container-left">
+            <div data-aos="fade-up" data-aos-duration="900">
+                <p class="paragraph-body visualization-title"  id="social-demo-title"><span>Title:</span> Demographic comparison of renters and buyers in Denmark</p>
+                    <select class="form-control" id="grouped-bars-choice" value="years">
+                        <option value="years">Work tenure and experience</option>
+                        <option value="family">Percentage living as a family</option>
+                        <option value="ages">Age distribution</option>
+                    </select>
+                <div id="rentOwnYears"></div>
+                <div id="rentOwnFamily" style="display:none"></div>
+                <div id="rentOwnAges" style="display:none"></div>
+                <p class="paragraph-body visualization-source"><span>Source:</span> Institute for the Study of Labor in Bonn, Germany <a href="https://www.econstor.eu/bitstream/10419/33742/1/513135634.pdf" target="_blank">(link)</a>
+            </div>
         </div>
-        <div class="col-md-6" class="visualization-container-right">
-            <p class="paragraph-body visualization-title"><span>Title:</span> Top 10 States by Volume of Inbound and Outbound Moving Shipments <br><br>
-                <select class="form-control" id="grouped-bars-choice" value="years">
-                    <option value="years">Work Tenure and Experience</option>
-                    <option value="family">Percentage Living as a Family</option>
-                    <option value="ages">Age Distribution of Owners vs. Renters</option>
-                </select>
-            <div id="rentOwnYears"></div>
-            <div id="rentOwnFamily" style="display:none"></div>
-            <div id="rentOwnAges" style="display:none"></div>
-            <p class="paragraph-body visualization-source"><span>Source:</span> Annual 2020 United Van Lines National Movers Study
-                <!--<div class="align-self-center" id="vis0"></div>-->
-        </div>
+        <div class="col-md-4" class="visualization-container-right">
+            <h1 class="main-header-label visualization-label" data-aos="fade-up" data-aos-duration="900">Social demographics</h1>
+            <p class="paragraph-body" data-aos="fade-up" data-aos-duration="1000">This visualization draws from a study of Danish demographic metrics of 1% of the population from 1993 to 2001. As a means of understanding how home owners and buyers differ demographically, the following grouped bar chart categorizes data from the study into three subsets: age, family, and work. <br><br> An analysis of the data reveals significantly more work tenure and experience on the part of owners. It also suggests that owners are more likely to have two adults in a household and children living with them. As it relates to age, owners tend to be older than renters.  </p></div>
     </div>
     <!--<div class="row justify-content-center visualization-container" data-aos="fade-up" data-aos-duration="1100">
         <div class="col-md-6" class="visualization-container-left">

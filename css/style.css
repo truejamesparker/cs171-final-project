@@ -146,6 +146,7 @@ h3 {
 .form-control {
   width: 90%;
   margin-bottom: 15px;
+  font-family: Montserrat;
 }
 
 .visualization-source {
@@ -411,4 +412,8 @@ h3 {
 
 .worship-emphasis {
   font-weight: 600;
+}
+
+#social-demo-title {
+  margin-bottom: 30px;
 }
