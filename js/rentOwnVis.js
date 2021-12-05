@@ -166,7 +166,7 @@ class RentOwnVis {
                 .html(`
                          <div>
                  
-                             <p><span class="tooltip-emphasis">${toTitleCase(d.key)}</span>: ${vis.tooltipstring}</p>                                                        
+                             <p id="social-demo-tooltip-label"><span class="tooltip-emphasis">${toTitleCase(d.key)}</span>: ${vis.tooltipstring}</p>                                                        
                            
  
                          </div>`);
