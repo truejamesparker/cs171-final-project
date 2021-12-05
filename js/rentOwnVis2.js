@@ -92,7 +92,6 @@ class RentOwnVis {
     updateVis() {
         let vis = this;
 
-
         vis.svg.append("g")
             .selectAll("g")
             // Enter in data = loop group per group

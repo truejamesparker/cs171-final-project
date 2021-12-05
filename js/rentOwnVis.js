@@ -45,7 +45,7 @@ class RentOwnVis {
         }
 
 
-        vis.margin = { top: 40, right: 20, bottom: 40, left: 20 };
+        vis.margin = { top: 40, right: 20, bottom: 60, left: 90 };
         vis.width = 600 - vis.margin.left - vis.margin.right,
             vis.height = 400 - vis.margin.top - vis.margin.bottom;
         // SVG drawing area
@@ -76,11 +76,16 @@ class RentOwnVis {
             vis.y = d3.scaleLinear()
                 .domain([0, 20])
                 .range([vis.height, 0]);
-        } else {
+        } else if (vis.type == 'family') {
             vis.y = d3.scaleLinear()
                 .domain([0, 1])
                 .range([vis.height, 0]);
+        } else {
+            vis.y = d3.scaleLinear()
+                .domain([0, 0.4])
+                .range([vis.height, 0]);
         }
+
         if (vis.type === 'years') {
             vis.svg.append("g")
                 .call(d3.axisLeft(vis.y))
@@ -144,6 +149,41 @@ class RentOwnVis {
             .attr("width", vis.xSubgroup.bandwidth())
             .attr("height", function(d) { return vis.height - vis.y(d.value); })
             .attr("fill", function(d) { return vis.color(d.key); });
+
+        vis.yLabel = vis.svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "end")
+            .attr("x", -110)
+            .attr("y", -70)
+            .attr("dy", "0.5em")
+            .attr("transform", "rotate(-90)")
+            .text(function(d) {
+                if (vis.type === 'years') {
+                    return "Number of Years";
+                }
+                else if (vis.type === 'family') {
+                    return "Percentage (%)";
+                } else if (vis.type == "ages") {
+                    return "Percentage (%)";
+                }
+            });
+
+        vis.xLabel = vis.svg.append("text")
+            .attr("class", "x label")
+            .attr("text-anchor", "end")
+            .attr("x", 320)
+            .attr("y", 345)
+            .attr("dy", "0.5em")
+            .text(function(d) {
+                if (vis.type === 'years') {
+                    return "";
+                }
+                else if (vis.type === 'family') {
+                    return "";
+                } else if (vis.type == "ages") {
+                    return "Age Group (in years)";
+                }
+            });
 
         vis.svg.selectAll("rect").on('mouseover', function(event, d) {
 

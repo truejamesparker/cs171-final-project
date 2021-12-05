@@ -75,8 +75,8 @@ class StateMovementBarChart {
 		vis.yLabel = vis.svg.append("text")
 			.attr("class", "y label")
 			.attr("text-anchor", "end")
-			.attr("x", 0)
-			.attr("y", -60)
+			.attr("x", -20)
+			.attr("y", -70)
 			.attr("dy", "0.5em")
 			.attr("transform", "rotate(-90)")
 			.text(function(d) {
