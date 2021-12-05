@@ -395,3 +395,7 @@ h3 {
 .btn:focus {
   background-color: #c772f2 !important;
 }
+
+#worship-vis {
+  height: 400px;
+}

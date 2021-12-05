@@ -28,10 +28,10 @@ class StateMovementBarChart {
 			.attr("height", vis.height + vis.margin.top + vis.margin.bottom)
 			.append("g")
 			.attr("transform",
-				"translate(" + vis.margin.left + "," + vis.margin.top + ")");
+				"translate(" + vis.margin.left + "," + vis.margin.top + ")")
 
 		vis.x = d3.scaleBand()
-			.range([ 0, vis.width ])
+			.range([ 0, vis.width])
 			.domain(vis.data.map(function(d) { return d.StateName; }))
 			.padding(0.2);
 

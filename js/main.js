@@ -5,6 +5,7 @@ AOS.init();
 // VARIABLES
 
 let globalData;
+let rentOwnSelected;
 
 // URLS
 
@@ -19,7 +20,9 @@ let promises = [
     d3.json('data/home_phys_data.json'),
     d3.csv('data/famous_homes.csv'),
     d3.json('data/states.json'),
-    d3.csv('data/lotsizes.csv')
+    d3.csv('data/lotsizes.csv'),
+    d3.csv('data/All_Places_of_Worship.csv'),
+    d3.csv('data/ownrent.csv'),
 ];
 
 // AWAIT
@@ -39,6 +42,8 @@ function initVisuals(datasets) {
     let famousData = datasets[3];
     let stateData = datasets[4];
     let lotData = datasets[5];
+    let worshipData = datasets[6]
+    let rentOwnData = datasets[7]
 
     // INITIALIZE VISUALIZATIONS
 
@@ -47,6 +52,8 @@ function initVisuals(datasets) {
     physVis = new PhysVis("physical", physData);
     famousVis = new FamousVis("famous", famousData);
     homeMapVis = new HomeMapVis("home-map", stateData, lotData);
+    worshipVis = new WorshipVis("worship-vis", worshipData);
+    rentOwnVis = new RentOwnVis('rentOwn', rentOwnData)
 
     // INIT EVENT HANDLERS
 
@@ -55,4 +62,6 @@ function initVisuals(datasets) {
     //     let rangeEnd = event.detail[1];
     //     dataVis0.onSelectionChange(rangeStart, rangeEnd);
     // });
+
+
 }
