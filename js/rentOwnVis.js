@@ -46,9 +46,8 @@ class RentOwnVis {
 
 
         vis.margin = { top: 40, right: 20, bottom: 40, left: 20 };
-        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.top - vis.margin.bottom;
-
+        vis.width = 600 - vis.margin.left - vis.margin.right,
+            vis.height = 400 - vis.margin.top - vis.margin.bottom;
         // SVG drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
