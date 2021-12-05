@@ -22,7 +22,6 @@ let promises = [
     d3.json('data/states.json'),
     d3.csv('data/lotsizes.csv'),
     d3.csv('data/All_Places_of_Worship.csv'),
-    d3.csv('data/ownrent.csv'),
 ];
 
 // AWAIT
@@ -53,7 +52,6 @@ function initVisuals(datasets) {
     famousVis = new FamousVis("famous", famousData);
     homeMapVis = new HomeMapVis("home-map", stateData, lotData);
     worshipVis = new WorshipVis("worship-vis", worshipData);
-    rentOwnVis = new RentOwnVis('rentOwn', rentOwnData)
 
     // INIT EVENT HANDLERS
 

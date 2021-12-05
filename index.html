@@ -10,12 +10,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Load Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet'
           type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
+          rel='stylesheet' type='text/css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -255,12 +258,14 @@
         </div>
         <div class="col-md-6" class="visualization-container-right">
             <p class="paragraph-body visualization-title"><span>Title:</span> Top 10 States by Volume of Inbound and Outbound Moving Shipments <br><br>
-                <select class="form-control" id="grouped-bars-choice">
+                <select class="form-control" id="grouped-bars-choice" value="years">
                     <option value="years">Work Tenure and Experience</option>
                     <option value="family">Percentage Living as a Family</option>
                     <option value="ages">Age Distribution of Owners vs. Renters</option>
                 </select>
-            <div id="rentOwn"></div>
+            <div id="rentOwnYears"></div>
+            <div id="rentOwnFamily"></div>
+            <div id="rentOwnAges" ></div>
             <p class="paragraph-body visualization-source"><span>Source:</span> Annual 2020 United Van Lines National Movers Study
                 <!--<div class="align-self-center" id="vis0"></div>-->
         </div>
@@ -483,6 +488,7 @@
 <script src="js/homeMapVis.js"></script>
 <script src="js/worshipVis.js"></script>
 <script src="js/rentOwnVis.js"></script>
+<script src="js/rentOwnVismain.js"></script>
 
 
 
