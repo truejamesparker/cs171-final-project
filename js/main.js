@@ -53,13 +53,4 @@ function initVisuals(datasets) {
     homeMapVis = new HomeMapVis("home-map", stateData, lotData);
 
 
-    // INIT EVENT HANDLERS
-
-    // eventHandler.bind("selectionChanged", function(event){
-    //     let rangeStart = event.detail[0];
-    //     let rangeEnd = event.detail[1];
-    //     dataVis0.onSelectionChange(rangeStart, rangeEnd);
-    // });
-
-
 }

@@ -1,6 +1,6 @@
 
 /*
- *  HomePriceIndexMap - Object constructor function
+ *  tvVis - Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
  *  @param _data            -- Array with all stations of the bike-sharing network
  */
@@ -24,8 +24,6 @@ class TvVis {
 	 */
 	initVis () {
 		let vis = this;
-
-		// TODO
 
 		vis.margin = { top: 20, right: 20, bottom: 0, left: 20 };
 
@@ -147,8 +145,6 @@ class TvVis {
 	 */
 	wrangleData () {
 		let vis = this;
-
-		// TODO
 
 		if (vis.selectedTime) {
 			vis.displayData = this.data.filter(d => d.year > vis.selectedTime[0] && d.year < vis.selectedTime[1])

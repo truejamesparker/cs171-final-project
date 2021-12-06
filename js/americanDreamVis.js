@@ -22,8 +22,6 @@ class AmericanDreamVis {
             .attr('class', "tooltip")
             .attr('id', 'dreamTooltip')
 
-        // TODO
-
         vis.margin = { top: 40, right: 20, bottom: 40, left: 20 };
 
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -86,13 +84,6 @@ class AmericanDreamVis {
                 .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-(i*20) + 58)+ "," + vis.height*0.06+")")
                 .attr("fill", "white")
         }
-
-
-        /*
-        vis.svg.append("path")
-            .attr("d", d3.symbol().type(d3.symbolStar).size(1200))
-            .attr("transform", "translate("+ ((vis.width/2+vis.margin.left/2)-30)+ "," + vis.height*0.15+")")
-            .attr("fill", "white")*/
 
         vis.xAxisGroup = vis.svg.append("g")
             .attr("class", "x-axis axis");
@@ -178,10 +169,6 @@ class AmericanDreamVis {
             .transition()
             .call(vis.yAxis);
 
-
-
-
-        // TODO
 
     }
 }

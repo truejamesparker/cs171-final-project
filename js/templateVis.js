@@ -1,6 +1,6 @@
 
 /*
- *  HomePriceIndexMap - Object constructor function
+ *  TemplateVis - Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
  *  @param _data            -- Array with all stations of the bike-sharing network
  */
@@ -25,8 +25,6 @@ class TemplateVis {
 	initVis () {
 		let vis = this;
 
-		// TODO
-
 		vis.margin = { top: 40, right: 20, bottom: 40, left: 20 };
 
 		vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -49,8 +47,6 @@ class TemplateVis {
 	wrangleData () {
 		let vis = this;
 
-		// TODO
-
 		this.displayData = this.data;
 
 		// Update the visualization
@@ -60,7 +56,6 @@ class TemplateVis {
 	updateVis() {
 		let vis = this;
 
-		// TODO
 
 	}
 }

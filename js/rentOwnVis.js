@@ -1,8 +1,8 @@
 
 /*
- *  HomePriceIndexMap - Object constructor function
+ *  rentOwnVis - Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
- *  @param _data            -- Array with all stations of the bike-sharing network
+ *  @param _data
  */
 
 class RentOwnVis {
@@ -25,7 +25,7 @@ class RentOwnVis {
      */
     initVis () {
         let vis = this;
-        // TODO
+
         if (vis.type === 'years') {
             vis.cols = vis.data.columns
             vis.displayData = vis.data.filter(d=>d.group === 'Current Job Tenure' || d.group === 'Work Experience')
@@ -123,8 +123,6 @@ class RentOwnVis {
      */
     wrangleData () {
         let vis = this;
-
-        // TODO
 
         // Update the visualization
         vis.updateVis();

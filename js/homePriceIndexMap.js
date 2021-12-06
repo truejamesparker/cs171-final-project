@@ -157,9 +157,6 @@ class HomePriceIndexMap {
 
 		HPIMapBox.addTo(vis.map);
 
-
-
-
 		function styleLines(d) {
 
 			if (variable_type == "HPI_change") {
