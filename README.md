@@ -12,3 +12,5 @@ It is particularly interesting that housing touches all levels of Maslow’s hie
 Our goal for this project is to explore Maslow’s hierarchy in the lens of housing visualizations. This topic provided the opportunity to create a diverse portfolio of visualizations that illustrate trends such as relocation, entertainment, home physical characteristics, etc. Our visualizations will be exploratory in nature and allow homebuyers to identify insights like housing hot spots, notable mansions, and geographic housing trends.
 
 There's no place like home.
+
+![alt text](https://i.imgur.com/8ksN6qY.png)
