@@ -1,8 +1,3 @@
-/* * * * * * * * * * * * * *
-*         StateMovement_pieChart         *
-* * * * * * * * * * * * * */
-
-
 class StateMovement_pieChart {
 
     constructor(parentElement, data, state) {

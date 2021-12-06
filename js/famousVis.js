@@ -1,8 +1,8 @@
 
 /*
- *  StationMap - Object constructor function
+ *  famousVis - Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
- *  @param _data            -- Array with all stations of the bike-sharing network
+ *  @param _data            --
  */
 
 class FamousVis {
@@ -24,8 +24,6 @@ class FamousVis {
 	 */
 	initVis () {
 		let vis = this;
-
-		// TODO
 
 		vis.margin = { top: 0, right: 40, bottom: 40, left: 20 };
 
@@ -72,7 +70,6 @@ class FamousVis {
 	wrangleData () {
 		let vis = this;
 
-		// TODO
 		vis.displayData = vis.data
 
 		// Update the visualization
@@ -82,20 +79,16 @@ class FamousVis {
 	updateVis() {
 		let vis = this;
 
-		// console.log(vis.displayData)
-
 		function getRandomInt(min, max) {
 			min = Math.ceil(min);
 			max = Math.floor(max);
 			return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 		}
 
-		// TODO
 		vis.svg.selectAll(".home")
 			.data(vis.displayData)
 			.enter()
 			.append("circle")
-			//.append("vis:img")
 			.attr("fill", function(d) {
 				if (d.sqft > 100000) {
 					return "#DFAAFB"
@@ -113,25 +106,20 @@ class FamousVis {
 				}
 			})
 			.attr("opacity", 0.6)
-			// .attr("xlink:href", "img/mansion.svg")
 			.attr("cx", d => vis.x(d.completed))
 			.attr("cy", (d,i) => d.sqft*0.0021)
 			.attr("r", (d,i) => d.sqft*0.00015)
-			// .attr("width", d => vis.s(d.sqft))
-			// .attr("height", d => vis.s(d.sqft))
 			.on('mouseover', function(event, d){
 				d3.select(this)
 					.attr('stroke-width', '2px')
 					.attr('stroke', 'black')
 					.attr("opacity", 1)
-					// .attr('fill', 'rgba(173,222,255,0.62)');
 				vis.tooltip
 					.style("opacity", 1)
 					.style("left", event.pageX + 20 + "px")
 					.style("top", event.pageY + "px")
 					.html(`
          <div>
-             <!--<a href="https://en.wikipedia.org/wiki/$//{d.name.split(' ').join('_')}">$//{d.name}</a> -->   
              <p><span class="tooltip-emphasis">Name:</span> ${d.name}</p>                
              <p><span class="tooltip-emphasis">Square Feet:</span> ${d.sqft}</p>   
              <p><span class="tooltip-emphasis">Architect:</span> ${d.architect}</p>   

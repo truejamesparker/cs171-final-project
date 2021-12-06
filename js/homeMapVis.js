@@ -1,8 +1,8 @@
 
 /*
- *  HomePriceIndexMap - Object constructor function
+ *  HomeMap- Object constructor function
  *  @param _parentElement   -- HTML element in which to draw the visualization
- *  @param _data            -- Array with all stations of the bike-sharing network
+ *  @param _data            --
  */
 
 class HomeMapVis {
@@ -25,8 +25,6 @@ class HomeMapVis {
 	 */
 	initVis () {
 		let vis = this;
-
-		// TODO
 
 		vis.margin = { top: 40, right: 30, bottom: 40, left: 30 };
 
@@ -154,19 +152,14 @@ class HomeMapVis {
 			.weight(d => d[vis.dataType])
 			.size([vis.width, vis.height])
 			.bandwidth(15)(
-				// smaller = more precision in lines = more lines
 				Object.values(vis.displayData)
 			);
 
 		const thresholds = densityData.map((r) => +r.value);
-		// let tmed = d3.median(thresholds)
 		let tmean = d3.mean(thresholds)
-		// let tdev = d3.deviation(thresholds)
 		let tmin = d3.min(thresholds)
 		let tmax = d3.max(thresholds)
 		let extents = [tmin, tmean, tmax]
-		// let extents = [tmean - tdev, tmed, tmean + tdev]
-		// extents.sort((a, b) => a - b);
 
 		const color = d3
 			.scaleLinear()

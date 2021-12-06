@@ -59,19 +59,6 @@ class StateMovementBarChart {
 	updateVis() {
 		let vis = this;
 
-		/*vis.title = vis.svg.append('g')
-			.attr('class', 'title bar-title')
-			.append('text')
-			.text(function(d) {
-				if (vis.type == "inbound") {
-					return "Top 10 States by Percentage of Inbound Shipments"
-				} else if (vis.type == "outbound") {
-					return "Top 10 States by Percentage of Outbound Shipments"
-				}
-			})
-			.attr('transform', `translate(${vis.width / 2}, -25)`)
-			.attr('text-anchor', 'middle');*/
-
 		vis.yLabel = vis.svg.append("text")
 			.attr("class", "y label")
 			.attr("text-anchor", "end")
