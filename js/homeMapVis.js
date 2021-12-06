@@ -138,6 +138,8 @@ class HomeMapVis {
 	wrangleData () {
 		let vis = this;
 
+		vis.displayData.sort((a,b) => a[vis.dataType] - b[vis.dataType])
+
 		// Update the visualization
 		vis.updateVis();
 	}
@@ -145,11 +147,8 @@ class HomeMapVis {
 	updateVis() {
 		let vis = this;
 
-		vis.displayData.sort((a,b) => a[vis.dataType] - b[vis.dataType])
-
 		// compute the density data
-		const densityData = d3
-			.contourDensity()
+		const densityData = d3.contourDensity()
 			.x(d => vis.projection([d.longitude, d.latitude])[0]) // x and y = column name in .csv input data
 			.y(d => vis.projection([d.longitude, d.latitude])[1])
 			.weight(d => d[vis.dataType])
@@ -160,14 +159,14 @@ class HomeMapVis {
 			);
 
 		const thresholds = densityData.map((r) => +r.value);
-		let tmed = d3.median(thresholds)
+		// let tmed = d3.median(thresholds)
 		let tmean = d3.mean(thresholds)
-		let tdev = d3.deviation(thresholds)
+		// let tdev = d3.deviation(thresholds)
 		let tmin = d3.min(thresholds)
 		let tmax = d3.max(thresholds)
-		// let extents = [tmean - tdev, tmed, tmean + tdev]
 		let extents = [tmin, tmean, tmax]
-		extents.sort((a, b) => a - b);
+		// let extents = [tmean - tdev, tmed, tmean + tdev]
+		// extents.sort((a, b) => a - b);
 
 		const color = d3
 			.scaleLinear()
@@ -194,9 +193,6 @@ class HomeMapVis {
 		vis.paths.exit()
 			.remove()
 
-		vis.lots = vis.svgLots.selectAll(".lot")
-			.data(vis.displayData)
-
 		vis.labels = vis.svgLots.selectAll(".state-label")
 			.data(vis.displayData)
 
@@ -207,6 +203,13 @@ class HomeMapVis {
 			.text(d => d.state)
 			.attr("x", (d,i) => vis.lotx(i % 10))
 			.attr("y", (d,i) => vis.loty(Math.floor(i/10)) - 10)
+
+		vis.labels
+			.merge(vis.labels)
+			.text(d => d.state)
+
+		vis.lots = vis.svgLots.selectAll(".lot")
+			.data(vis.displayData)
 
 		vis.lots
 			.enter()
@@ -252,10 +255,6 @@ class HomeMapVis {
 			.attr("y", (d,i) => vis.loty(Math.floor(i/10)))
 			.attr("width", d => vis.lot2width(d[vis.dataType]))
 			.attr("height", d => vis.lot2width(d[vis.dataType]))
-
-		vis.labels
-			.merge(vis.labels)
-			.text(d => d.state)
 
 	}
 }
