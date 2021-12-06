@@ -1,26 +1,23 @@
 # CS 171 Final Project
 
 ## No Place Like Home
-### Exploring Maslow’s Hierarchy of through interactive housing visualizations
+### Exploring Maslow’s Hierarchy through interactive housing visualizations
 
-https://truejamesparker.github.io/cs171-final-project/
+_David Hacker | Ethan McFarlin | James Parker_
 
-David Hacker | Ethan McFarlin | James Parker
+See live project [here](https://truejamesparker.github.io/cs171-final-project/).
+
+View visualization screencast [here](https://www.youtube.com/watch?v=KJVTlWXJVJo&ab_channel=EthanMcFarlin).
 
 ![alt text](https://i.imgur.com/8ksN6qY.png)
 
 Maslow’s hierarchy of needs is a psychological model that maps out tiers of human needs on the basis of five fundamental
-factors:
-1. Physiological
-2. Safety
-3. Love
-4. Esteem
-5. Self-actualization
+factors. Find a more detailed explanation of this model [here](https://www.simplypsychology.org/maslow.html). 
 
 Housing touches **all** levels of Maslow's Heirarchy. From basic physical shelter to a medium for artistic expression,
 our housing plays a significant role in how we experience life, interact with others, and even feel about ourselves.
 
-Our goal for this project is to explore Maslow’s Hierarchy through the lens of housing using interactive data 
+Our goal for this project is to explore how housing touches every level of Maslow’s Hierarchy through interactive data 
 visualizations. This project provided the opportunity to create a diverse portfolio of visualizations that illustrate
 trends in relocation, entertainment, celebrity mansions, housing's physical characteristics, etc.
 
@@ -29,7 +26,6 @@ organizations that seek to make quality housing and home-ownership more accessib
 
 Afterall, there’s no place like home.
 
-View visualization screencast [here](https://www.youtube.com/watch?v=KJVTlWXJVJo&ab_channel=EthanMcFarlin). 
 
 External libraries:
 
