@@ -3,7 +3,11 @@
 ## No Place Like Home
 ### Exploring Maslow’s Hierarchy of through interactive housing visualizations
 
+https://truejamesparker.github.io/cs171-final-project/
+
 David Hacker | Ethan McFarlin | James Parker
+
+![alt text](https://i.imgur.com/8ksN6qY.png)
 
 Maslow’s hierarchy of needs is a psychological model that maps out tiers of human needs on the basis of five fundamental
 factors:
