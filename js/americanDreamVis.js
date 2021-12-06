@@ -41,6 +41,7 @@ class AmericanDreamVis {
             .paddingInner(0.1);
         vis.y = d3.scaleLinear()
             .domain([0, 100])
+            // .domain([100, 0])
             .range([vis.height * 0.3, vis.height]);
 
         vis.svg.append("rect")
@@ -118,7 +119,8 @@ class AmericanDreamVis {
             .attr("x", (d,i)=> i * 30+vis.width/4)
             .attr("y", vis.height * 0.3)
             .attr("width", 15)
-            .attr("height", d=> vis.y(100 - d.Percent))
+            // .attr("height", d=> vis.y(100 - d.Percent))
+            .attr("height", d=> vis.y(d.Percent - 42))
             // .attr("fill", "#B22234")
             .attr("fill", "url(#stripeGradient)")
             .on('mouseover', function(event, d){
