@@ -191,7 +191,7 @@ class RentOwnVis {
                 .attr('stroke', 'lightgrey')
                 .attr('opacity', 0.7)
 
-            vis.tooltipstring = d.value * 100 + "%"
+            vis.tooltipstring = roundToTwo(d.value * 100) + "%"
             if (vis.type === 'years') {
                 vis.tooltipstring = d.value + " years"
             }
